@@ -10527,7 +10527,7 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
                 if (itemName == null) {
                     continue;
                 }
-                System.out.println("Calling gain item exp "+ itemName);
+                
                 nEquip.gainItemExp(client, expGain);
             }
         }
