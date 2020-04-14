@@ -6763,19 +6763,19 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
     public void setPlayerRates() {
         this.expRate  *=  GameConstants.getPlayerBonusExpRate(this.level / 20);
         this.mesoRate *= GameConstants.getPlayerBonusMesoRate(this.level / 20);
-        // this.dropRate *= GameConstants.getPlayerBonusDropRate(this.level / 20); disable bonus drop
+        this.dropRate *= GameConstants.getPlayerBonusDropRate(this.level / 20); 
     }
 
     public void revertLastPlayerRates() {
         this.expRate  /=  GameConstants.getPlayerBonusExpRate((this.level - 1) / 20);
         this.mesoRate /= GameConstants.getPlayerBonusMesoRate((this.level - 1) / 20);
-        // this.dropRate /= GameConstants.getPlayerBonusDropRate((this.level - 1) / 20);  disable bonus drop
+        this.dropRate /= GameConstants.getPlayerBonusDropRate((this.level - 1) / 20);  
     }
     
     public void revertPlayerRates() {
         this.expRate  /=  GameConstants.getPlayerBonusExpRate(this.level / 20);
         this.mesoRate /= GameConstants.getPlayerBonusMesoRate(this.level / 20);
-        // this.dropRate /= GameConstants.getPlayerBonusDropRate(this.level / 20);  disable bonus drop
+        this.dropRate /= GameConstants.getPlayerBonusDropRate(this.level / 20); 
     }
     
     public void setWorldRates() {
@@ -10527,7 +10527,7 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
                 if (itemName == null) {
                     continue;
                 }
-
+                System.out.println("Calling gain item exp "+ itemName);
                 nEquip.gainItemExp(client, expGain);
             }
         }
