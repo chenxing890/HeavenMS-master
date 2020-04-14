@@ -10,8 +10,8 @@ worlds:
     channels: 4
     exp_rate: 3
     meso_rate: 100
-    drop_rate: 2
-    boss_drop_rate: 8 #NOTE: Boss drop rate OVERRIDES common drop rate, for bosses-only.
+    drop_rate: 4
+    boss_drop_rate: 10 #NOTE: Boss drop rate OVERRIDES common drop rate, for bosses-only.
     quest_rate: 10 #Multiplier for Exp & Meso gains when completing a quest. Only available when USE_QUEST_RATE is true. Stacks with server Exp & Meso rates.
     fishing_rate: 10 #Multiplier for success likelihood on meso thrown during fishing.
     travel_rate: 2 #Means of transportation rides/departs using 1/N of the default time.
@@ -268,7 +268,7 @@ server:
   #Events/PQs Configuration
   USE_OLD_GMS_STYLED_PQ_NPCS: true #Enables PQ NPCs with similar behaviour to old GMS style, that skips info about the PQs and immediately tries to register the party in.
   USE_ENABLE_SOLO_EXPEDITIONS: true #Enables start expeditions with any number of players. This will also bypass all the Zakum prequest.
-  USE_ENABLE_DAILY_EXPEDITIONS: true #Enables daily entry limitations in expeditions.
+  USE_ENABLE_DAILY_EXPEDITIONS: false #Enables daily entry limitations in expeditions.
   USE_ENABLE_RECALL_EVENT: true #Enables a disconnected player to reaccess the last event instance they were in before logging out. Recall only works if the event isn't cleared or disposed yet. Suggestion thanks to Alisson (Goukken).
 
   #Announcement Configuration
@@ -293,7 +293,7 @@ server:
   BLOCK_GENERATE_CASH_ITEM: false #Prevents creation of cash items with the item/drop command.
   USE_WHOLE_SERVER_RANKING: false #Enables a ranking pool made from every character registered on the server for the "ranks" command, instead of separated by worlds.
 
-  EQUIP_EXP_RATE: 1.0 #Rate for equipment exp gain, grows linearly. Set 1.0 for default (about 100~200 same-level range mobs killed to pass equip from level 1 to 2).
+  EQUIP_EXP_RATE: 5.0 #Rate for equipment exp gain, grows linearly. Set 1.0 for default (about 100~200 same-level range mobs killed to pass equip from level 1 to 2).
   PQ_BONUS_EXP_RATE: 10 #Rate for the PQ exp reward.
 
   EXP_SPLIT_LEVEL_INTERVAL: 10 #Non-contributing players must be within N level between the mob to receive EXP.
