@@ -24,4 +24,5 @@
 hs_err_pid*
 
 # ignore all logs
-logs/
+!logs/
+logs/*
