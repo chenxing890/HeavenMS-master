@@ -1,0 +1,48 @@
+hj27952 caused FAST_MP_HEALING Fast mp healing
+---------------------------------
+
+hj27952 caused FAST_MP_HEALING Fast mp healing
+---------------------------------
+
+hj27952 caused FAST_MP_HEALING Fast mp healing
+---------------------------------
+
+hj27952 caused FAST_MP_HEALING Fast mp healing
+---------------------------------
+
+hj27952 caused FAST_MP_HEALING Fast mp healing
+---------------------------------
+
+hj27952 caused FAST_MP_HEALING Fast mp healing
+---------------------------------
+
+moushfish caused MPCON Skill: 2201005; Player MP: 0; MP Needed: 40
+---------------------------------
+
+DDDxt caused FAST_HP_HEALING Fast hp healing
+---------------------------------
+
+DDDxt caused FAST_MP_HEALING Fast mp healing
+---------------------------------
+
+DDDxt caused FAST_HP_HEALING Fast hp healing
+---------------------------------
+
+DDDxt caused FAST_HP_HEALING Fast hp healing
+---------------------------------
+
+RW123 caused DISTANCE_HACK Distance Sq to monster: 374042.0 SID: 1001005 MID: 5100005
+---------------------------------
+
+RW123 caused DISTANCE_HACK Distance Sq to monster: 295069.0 SID: 1001005 MID: 5100005
+---------------------------------
+
+RW123 caused DISTANCE_HACK Distance Sq to monster: 299444.0 SID: 1001005 MID: 5100004
+---------------------------------
+
+RW123 caused DISTANCE_HACK Distance Sq to monster: 295220.0 SID: 1001005 MID: 5100005
+---------------------------------
+
+xx1994 caused DISTANCE_HACK Distance Sq to monster: 1375954.0 SID: 4001344 MID: 4230505
+---------------------------------
+

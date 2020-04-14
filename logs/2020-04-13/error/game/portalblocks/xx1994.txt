@@ -1,0 +1,2 @@
+Player xx1994 got stuck when changing maps. Timestamp: Mon Apr 13 08:59:26 GMT-05:00 2020 Last visited mapids: [251010300, 251010400, 251010404, 251010401, 251010402]
+Player xx1994 got stuck when changing maps. Timestamp: Mon Apr 13 09:04:51 GMT-05:00 2020 Last visited mapids: [251010400, 251010404, 251010401, 251010403, 251010402]

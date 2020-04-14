@@ -1,0 +1,72 @@
+xx1994 caused DISTANCE_HACK Distance Sq to monster: 2437973.0 SID: 4111005 MID: 7130104
+---------------------------------
+
+xx1994 caused DISTANCE_HACK Distance Sq to monster: 2580218.0 SID: 4111005 MID: 6130208
+---------------------------------
+
+xx1994 caused DISTANCE_HACK Distance Sq to monster: 1695413.0 SID: 4111005 MID: 7130104
+---------------------------------
+
+RW123 caused DISTANCE_HACK Distance Sq to monster: 479065.0 SID: 1311006 MID: 2230100
+---------------------------------
+
+RW123 caused DISTANCE_HACK Distance Sq to monster: 546533.0 SID: 1311006 MID: 2230100
+---------------------------------
+
+RW123 caused DISTANCE_HACK Distance Sq to monster: 479333.0 SID: 1311006 MID: 2230100
+---------------------------------
+
+xx1994 caused FAST_HP_HEALING Fast hp healing
+---------------------------------
+
+xx1994 caused FAST_MP_HEALING Fast mp healing
+---------------------------------
+
+xx1994 caused FAST_HP_HEALING Fast hp healing
+---------------------------------
+
+xx1994 caused FAST_MP_HEALING Fast mp healing
+---------------------------------
+
+xx1994 caused FAST_HP_HEALING Fast hp healing
+---------------------------------
+
+xx1994 caused FAST_MP_HEALING Fast mp healing
+---------------------------------
+
+xx1994 caused FAST_HP_HEALING Fast hp healing
+---------------------------------
+
+xx1994 caused FAST_MP_HEALING Fast mp healing
+---------------------------------
+
+RW123 caused DISTANCE_HACK Distance Sq to monster: 599729.0 SID: 1311006 MID: 9400545
+---------------------------------
+
+RW123 caused DISTANCE_HACK Distance Sq to monster: 461122.0 SID: 1311006 MID: 9400545
+---------------------------------
+
+RW123 caused DISTANCE_HACK Distance Sq to monster: 628505.0 SID: 1311006 MID: 9400545
+---------------------------------
+
+RW123 caused DISTANCE_HACK Distance Sq to monster: 589529.0 SID: 1311006 MID: 9400545
+---------------------------------
+
+RW123 caused DISTANCE_HACK Distance Sq to monster: 612593.0 SID: 1311006 MID: 9400545
+---------------------------------
+
+xx1994 caused DISTANCE_HACK Distance Sq to monster: 322705.0 SID: 0 MID: 9400545
+---------------------------------
+
+xx1994 caused DAMAGE_HACK DMG: 2112 MaxDMG: 1380 SID: 0 MobID: 9400542 Map: Deity Room (600020100)
+---------------------------------
+
+moushfish caused DISTANCE_HACK Distance Sq to monster: 463250.0 SID: 2211002 MID: 9400545
+---------------------------------
+
+RW123 caused DISTANCE_HACK Distance Sq to monster: 561928.0 SID: 1311006 MID: 9400545
+---------------------------------
+
+RW123 caused DISTANCE_HACK Distance Sq to monster: 474344.0 SID: 1311006 MID: 9400545
+---------------------------------
+
