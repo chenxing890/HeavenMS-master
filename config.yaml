@@ -300,7 +300,7 @@ server:
   EXP_SPLIT_LEECH_INTERVAL: 40 #Non-contributing players must be within N level between any contributing party member to receive EXP.
   EXP_SPLIT_MVP_MOD: 0.2
   EXP_SPLIT_COMMON_MOD: 0.8
-  PARTY_BONUS_EXP_RATE: 10 #Rate for the party exp bonus reward.
+  PARTY_BONUS_EXP_RATE: 2.5 #Rate for the party exp bonus reward.
 
   #Miscellaneous Configuration
   TIMEZONE: GMT-6
