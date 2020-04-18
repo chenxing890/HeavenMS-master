@@ -4,15 +4,15 @@
 worlds:
   #Properties for Scania 0
   - flag: 0
-    server_message: Welcome to ChongqingCheng
+    server_message: Welcome to cqc
     event_message: CQC !
     why_am_i_recommended: Le shi Wudu!
     channels: 4
     exp_rate: 1
     meso_rate: 100
     drop_rate: 1
-    boss_drop_rate: 5 #NOTE: Boss drop rate OVERRIDES common drop rate, for bosses-only.
-    quest_rate: 2 #Multiplier for Exp & Meso gains when completing a quest. Only available when USE_QUEST_RATE is true. Stacks with server Exp & Meso rates.
+    boss_drop_rate: 3 #NOTE: Boss drop rate OVERRIDES common drop rate, for bosses-only.
+    quest_rate: 6 #Multiplier for Exp & Meso gains when completing a quest. Only available when USE_QUEST_RATE is true. Stacks with server Exp & Meso rates.
     fishing_rate: 10 #Multiplier for success likelihood on meso thrown during fishing.
     travel_rate: 4 #Means of transportation rides/departs using 1/N of the default time.
 
@@ -173,7 +173,7 @@ server:
   CHANNEL_LOAD: 100 #Max players per channel (limit actually used to calculate the World server capacity).
   CHANNEL_LOCKS: 20 #Total number of structure management locks each channel has.
 
-  RESPAWN_INTERVAL: 8000 #10 seconds, 10000.
+  RESPAWN_INTERVAL: 5000 #10 seconds, 10000.
   PURGING_INTERVAL: 300000 #5 minutes, 300000.
   RANKING_INTERVAL: 3600000 #60 minutes, 3600000.
   COUPON_INTERVAL: 3600000 #60 minutes, 3600000.
@@ -185,8 +185,8 @@ server:
   BYPASS_PIC_EXPIRATION: 20 #Enables PIC bypass, which will remain active for that account by that client machine for N minutes. Set 0 to disable.
   BYPASS_PIN_EXPIRATION: 15 #Enables PIN bypass, which will remain active for that account by that client machine for N minutes. Set 0 to disable.
 
-  AUTOMATIC_REGISTER: false #Automatically register players when they login with a nonexistent username.
-  BCRYPT_MIGRATION: true #Performs a migration from old SHA-1 and SHA-512 password to bcrypt.
+  AUTOMATIC_REGISTER: true #Automatically register players when they login with a nonexistent username.
+  BCRYPT_MIGRATION: false #Performs a migration from old SHA-1 and SHA-512 password to bcrypt.
   COLLECTIVE_CHARSLOT: false #Available character slots are contabilized globally rather than per world server.
   DETERRED_MULTICLIENT: false #Enables detection of multi-client and suspicious remote IP on the login system.
   #Besides blocking logging in with several client sessions on the same machine, this also blocks suspicious login attempts for players that tries to login on an account using several diferent remote addresses.
@@ -220,7 +220,7 @@ server:
   USE_MTS: false
   USE_CPQ: true #Renders the CPQ available or not.
   USE_AUTOHIDE_GM: true #When enabled, GMs are automatically hidden when joining. Thanks to Steven Deblois (steven1152).
-  USE_BUYBACK_SYSTEM: false #Enables the HeavenMS-builtin buyback system, to be used by dead players when clicking the MTS button.
+  USE_BUYBACK_SYSTEM: true #Enables the HeavenMS-builtin buyback system, to be used by dead players when clicking the MTS button.
   USE_FIXED_RATIO_HPMP_UPDATE: false #Enables the HeavenMS-builtin HPMP update based on the current pool to max pool ratio.
   USE_FAMILY_SYSTEM: true
   USE_DUEY: true
@@ -258,7 +258,7 @@ server:
   USE_BUFF_EVERLASTING: false #Every applied buff on players holds expiration time so high it'd be considered permanent. Suggestion thanks to Vcoc.
   USE_MULTIPLE_SAME_EQUIP_DROP: false #Enables multiple drops by mobs of the same equipment, number of possible drops based on the quantities provided at the drop data.
   USE_BANISHABLE_TOWN_SCROLL: false #Enables town scrolls to act as if it's a "player banish", rendering the antibanish scroll effect available.
-  USE_ENABLE_FULL_RESPAWN: false #At respawn task, always respawn missing mobs when they're available. Spawn count doesn't depend on how many players are currently there.
+  USE_ENABLE_FULL_RESPAWN: true #At respawn task, always respawn missing mobs when they're available. Spawn count doesn't depend on how many players are currently there.
   USE_ENABLE_CHAT_LOG: false #Write in-game chat to log
   USE_REBIRTH_SYSTEM: false #Flag to enable/disable rebirth system
   USE_MAP_OWNERSHIP_SYSTEM: false #Flag to enable/disable map ownership system
@@ -266,7 +266,7 @@ server:
   USE_NPCS_SCRIPTABLE: true #Flag to enable/disable serverside predefined script NPCs.
 
   #Events/PQs Configuration
-  USE_OLD_GMS_STYLED_PQ_NPCS: true #Enables PQ NPCs with similar behaviour to old GMS style, that skips info about the PQs and immediately tries to register the party in.
+  USE_OLD_GMS_STYLED_PQ_NPCS: false #Enables PQ NPCs with similar behaviour to old GMS style, that skips info about the PQs and immediately tries to register the party in.
   USE_ENABLE_SOLO_EXPEDITIONS: true #Enables start expeditions with any number of players. This will also bypass all the Zakum prequest.
   USE_ENABLE_DAILY_EXPEDITIONS: false #Enables daily entry limitations in expeditions.
   USE_ENABLE_RECALL_EVENT: true #Enables a disconnected player to reaccess the last event instance they were in before logging out. Recall only works if the event isn't cleared or disposed yet. Suggestion thanks to Alisson (Goukken).
@@ -303,7 +303,7 @@ server:
   PARTY_BONUS_EXP_RATE: 2.5 #Rate for the party exp bonus reward.
 
   #Miscellaneous Configuration
-  TIMEZONE: GMT-6
+  TIMEZONE: GMT-4
   USE_DISPLAY_NUMBERS_WITH_COMMA: true #Enforce comma on displayed strings (use this when USE_UNITPRICE_WITH_COMMA is active and you still want to display comma-separated values).
   USE_UNITPRICE_WITH_COMMA: true #Set this accordingly with the layout of the unitPrices on Item.wz XML's, whether it's using commas or dots to represent fractions.
   MAX_MONITORED_BUFFSTATS: 5 #Limits accounting for "dormant" buff effects, that should take place when stronger stat buffs expires.
