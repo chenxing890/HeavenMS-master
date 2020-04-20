@@ -883,8 +883,9 @@ public abstract class AbstractDealDamageHandler extends AbstractMaplePacketHandl
             }
             
             for (int j = 0; j < ret.numDamage; j++) {
+                    int maxCapMultiplier = 50; //raise cap
                     int damage = lea.readInt();
-                    long hitDmgMax = calcDmgMax;
+                    long hitDmgMax = maxCapMultiplier*calcDmgMax;
                     if(ret.skill == Buccaneer.BARRAGE || ret.skill == ThunderBreaker.BARRAGE) {
                         if(j > 3)
                             hitDmgMax *= Math.pow(2, (j - 3));
@@ -898,8 +899,8 @@ public abstract class AbstractDealDamageHandler extends AbstractMaplePacketHandl
                     }
 
                     if(ret.skill == Marksman.SNIPE) {
-                            damage = 195000 + Randomizer.nextInt(5000);
-                            hitDmgMax = 200000;
+                            damage = 195000*maxCapMultiplier + Randomizer.nextInt(5000*maxCapMultiplier);
+                            hitDmgMax = 200000*maxCapMultiplier;
                     } else if (ret.skill == Beginner.BAMBOO_RAIN || ret.skill == Noblesse.BAMBOO_RAIN || ret.skill == Evan.BAMBOO_THRUST || ret.skill == Legend.BAMBOO_THRUST) {
                         hitDmgMax = 82569000; // 30% of Max HP of strongest Dojo boss
                     }
@@ -922,7 +923,6 @@ public abstract class AbstractDealDamageHandler extends AbstractMaplePacketHandl
                             // If the skill is a crit, inverse the damage to make it show up on clients.
                             damage = -Integer.MAX_VALUE + damage - 1;
                     }
-
                     allDamageNumbers.add(damage);
             }
             if (ret.skill != Corsair.RAPID_FIRE || ret.skill != Aran.HIDDEN_FULL_DOUBLE || ret.skill != Aran.HIDDEN_FULL_TRIPLE || ret.skill != Aran.HIDDEN_OVER_DOUBLE || ret.skill != Aran.HIDDEN_OVER_TRIPLE) {
