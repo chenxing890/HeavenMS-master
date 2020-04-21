@@ -4,9 +4,9 @@
 worlds:
   #Properties for Scania 0
   - flag: 0
-    server_message: Welcome to cqc
-    event_message: CQC !
-    why_am_i_recommended: Le shi Wudu!
+    server_message: 欢迎来到雾都冒险岛
+    event_message: 燥起来
+    why_am_i_recommended: 中文 中文
     channels: 4
     exp_rate: 1
     meso_rate: 100
@@ -179,13 +179,13 @@ server:
   COUPON_INTERVAL: 3600000 #60 minutes, 3600000.
   UPDATE_INTERVAL: 777 #Dictates the frequency on which the "centralized server time" is updated.
 
-  ENABLE_PIC: false #Pick true/false to enable or disable Pic. Delete character requires PIC available.
+  ENABLE_PIC: true #Pick true/false to enable or disable Pic. Delete character requires PIC available.
   ENABLE_PIN: false #Pick true/false to enable or disable Pin.
 
   BYPASS_PIC_EXPIRATION: 20 #Enables PIC bypass, which will remain active for that account by that client machine for N minutes. Set 0 to disable.
   BYPASS_PIN_EXPIRATION: 15 #Enables PIN bypass, which will remain active for that account by that client machine for N minutes. Set 0 to disable.
 
-  AUTOMATIC_REGISTER: true #Automatically register players when they login with a nonexistent username.
+  AUTOMATIC_REGISTER: false #Automatically register players when they login with a nonexistent username.
   BCRYPT_MIGRATION: false #Performs a migration from old SHA-1 and SHA-512 password to bcrypt.
   COLLECTIVE_CHARSLOT: false #Available character slots are contabilized globally rather than per world server.
   DETERRED_MULTICLIENT: false #Enables detection of multi-client and suspicious remote IP on the login system.
@@ -266,7 +266,7 @@ server:
   USE_NPCS_SCRIPTABLE: true #Flag to enable/disable serverside predefined script NPCs.
 
   #Events/PQs Configuration
-  USE_OLD_GMS_STYLED_PQ_NPCS: false #Enables PQ NPCs with similar behaviour to old GMS style, that skips info about the PQs and immediately tries to register the party in.
+  USE_OLD_GMS_STYLED_PQ_NPCS: true #Enables PQ NPCs with similar behaviour to old GMS style, that skips info about the PQs and immediately tries to register the party in.
   USE_ENABLE_SOLO_EXPEDITIONS: true #Enables start expeditions with any number of players. This will also bypass all the Zakum prequest.
   USE_ENABLE_DAILY_EXPEDITIONS: false #Enables daily entry limitations in expeditions.
   USE_ENABLE_RECALL_EVENT: true #Enables a disconnected player to reaccess the last event instance they were in before logging out. Recall only works if the event isn't cleared or disposed yet. Suggestion thanks to Alisson (Goukken).

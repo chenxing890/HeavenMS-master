@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <imgdir name="CashShop.img">
   <imgdir name="Base">
+       
     <canvas name="backgrnd" width="800" height="600">
+    <vector name="origin" x="720" y="450"/>
+          <int name="z" value="0"/>
     </canvas>
     <canvas name="backgrnd1" width="800" height="600">
+    <vector name="origin" x="720" y="450"/>
+          <int name="z" value="0"/>
     </canvas>
     <canvas name="backgrnd2" width="800" height="599">
+    <vector name="origin" x="720" y="450"/>
+          <int name="z" value="0"/>
     </canvas>
     <imgdir name="Tab">
       <imgdir name="Enable">
