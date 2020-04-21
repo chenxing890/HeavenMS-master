@@ -80,7 +80,7 @@
     </imgdir>
   </imgdir>
   <imgdir name="all">
-    <string name="0" value="Please refrain from using foul language in this game."/>
+    <string name="0" value="请不要在游戏中骂街"/>
     <string name="1" value="Verbal and other forms of abuse will NOT be tolerated. Abusers will be blocked from the game."/>
     <string name="2" value="Our Game Masters will NEVER ask for your login ID, password, pin, or personal information."/>
     <string name="3" value="NEVER give out your ID, password, or pin to ANYONE including administrators."/>
