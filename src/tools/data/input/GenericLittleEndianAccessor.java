@@ -135,7 +135,7 @@ public class GenericLittleEndianAccessor implements LittleEndianAccessor {
     ret[x] = (byte) readByte();
     }
     try {
-    String str= new String(ret,"GBK");
+    String str= new String(ret,"gbk");
     return str;
     } catch (Exception e) {
     System.err.println(e);
