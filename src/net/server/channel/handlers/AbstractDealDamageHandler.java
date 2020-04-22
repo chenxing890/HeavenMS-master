@@ -686,7 +686,6 @@ public abstract class AbstractDealDamageHandler extends AbstractMaplePacketHandl
         } else {
             calcDmgMax = chr.calculateMaxBaseDamage(chr.getTotalWatk());
         }
-
         if(ret.skill != 0) {
             Skill skill = SkillFactory.getSkill(ret.skill);
             MapleStatEffect effect = skill.getEffect(ret.skilllevel);
@@ -862,7 +861,7 @@ public abstract class AbstractDealDamageHandler extends AbstractMaplePacketHandl
                     if(ret.skill == FPWizard.POISON_BREATH || ret.skill == FPMage.POISON_MIST || ret.skill == FPArchMage.FIRE_DEMON || ret.skill == ILArchMage.ICE_DEMON) {
                             if(monster != null) {
                                     // Turns out poison is completely server side, so I don't know why I added this. >.<
-                                    //calcDmgMax = monster.getHp() / (70 - chr.getSkillLevel(skill));
+                                    calcDmgMax = monster.getHp() / (70 - chr.getSkillLevel(skill));
                             }
                     } else if(ret.skill == Hermit.SHADOW_WEB) {
                             if(monster != null) {
