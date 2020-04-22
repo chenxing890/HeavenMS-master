@@ -8,11 +8,11 @@ worlds:
     event_message: 燥起来
     why_am_i_recommended: 中文 中文
     channels: 4
-    exp_rate: 1
+    exp_rate: 2
     meso_rate: 100
     drop_rate: 1
     boss_drop_rate: 3 #NOTE: Boss drop rate OVERRIDES common drop rate, for bosses-only.
-    quest_rate: 6 #Multiplier for Exp & Meso gains when completing a quest. Only available when USE_QUEST_RATE is true. Stacks with server Exp & Meso rates.
+    quest_rate: 10 #Multiplier for Exp & Meso gains when completing a quest. Only available when USE_QUEST_RATE is true. Stacks with server Exp & Meso rates.
     fishing_rate: 10 #Multiplier for success likelihood on meso thrown during fishing.
     travel_rate: 4 #Means of transportation rides/departs using 1/N of the default time.
 
