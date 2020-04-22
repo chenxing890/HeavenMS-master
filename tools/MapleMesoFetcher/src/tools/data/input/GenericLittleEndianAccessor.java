@@ -135,7 +135,7 @@ for (int x = 0; x < n; x++) {
 ret[x] = (byte) readByte();
 }
 try {
-String str= new String(ret,"gbk");
+String str= new String(ret,"GBK");
 return str;
 } catch (Exception e) {
 System.err.println(e);
