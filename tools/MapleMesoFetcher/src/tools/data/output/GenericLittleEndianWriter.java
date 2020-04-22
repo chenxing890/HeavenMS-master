@@ -140,8 +140,13 @@ public class GenericLittleEndianWriter implements LittleEndianWriter {
      */
     @Override
     public void writeNullTerminatedAsciiString(String s) {
+        if (s.getBytes().length > 12) {
+            s = s.substring(0, 12);
+        }
         writeAsciiString(s);
-        write(0);
+        for (int x = s.getBytes().length; x < 12; x++) {
+            write(0);
+        }
     }
 
     /**

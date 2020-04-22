@@ -140,7 +140,7 @@ return str;
 } catch (Exception e) {
 System.err.println(e);
 }
-return null;
+  return "";
 }
 
     /**

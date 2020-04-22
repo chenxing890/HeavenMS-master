@@ -140,7 +140,7 @@ public class GenericLittleEndianAccessor implements LittleEndianAccessor {
     } catch (Exception e) {
     System.err.println(e);
     }
-    return null;
+    return "";
     }
 
     /**

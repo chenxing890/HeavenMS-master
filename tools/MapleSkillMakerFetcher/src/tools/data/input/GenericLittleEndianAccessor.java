@@ -140,8 +140,7 @@ return str;
 } catch (Exception e) {
 System.err.println(e);
 }
-return null;
-}
+  return "";}
 
     /**
      * Reads a null-terminated string from the stream.
