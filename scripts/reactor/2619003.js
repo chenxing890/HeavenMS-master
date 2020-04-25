@@ -19,8 +19,11 @@
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-function hit() {
-  rm.hitMonsterWithReactor(6090000, 1);
-}
+/*2619003.js - Poison Spray
+ *@author Richard Wu
+ */
 
-function act() {}
+function hit() {
+  rm.hitMonsterWithReactor(6090004, 10);
+  rm.getReactor().setEventState(Math.floor(Math.random() * 3));
+}
