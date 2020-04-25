@@ -185,7 +185,7 @@ server:
   BYPASS_PIC_EXPIRATION: 20 #Enables PIC bypass, which will remain active for that account by that client machine for N minutes. Set 0 to disable.
   BYPASS_PIN_EXPIRATION: 15 #Enables PIN bypass, which will remain active for that account by that client machine for N minutes. Set 0 to disable.
 
-  AUTOMATIC_REGISTER: false #Automatically register players when they login with a nonexistent username.
+  AUTOMATIC_REGISTER: true #Automatically register players when they login with a nonexistent username.
   BCRYPT_MIGRATION: false #Performs a migration from old SHA-1 and SHA-512 password to bcrypt.
   COLLECTIVE_CHARSLOT: false #Available character slots are contabilized globally rather than per world server.
   DETERRED_MULTICLIENT: false #Enables detection of multi-client and suspicious remote IP on the login system.
@@ -242,7 +242,7 @@ server:
   USE_ENFORCE_HPMP_SWAP: false #Forces players to reuse stats (via AP Resetting) located on HP/MP pool only inside the HP/MP stats.
   USE_ENFORCE_MOB_LEVEL_RANGE: true #Players N levels below the killed mob will gain no experience from defeating it.
   USE_ENFORCE_JOB_LEVEL_RANGE: true #Caps the player level on the minimum required to advance their current jobs.
-  USE_ENFORCE_JOB_SP_RANGE: true #Caps the player SP level on the total obtainable by their current jobs. After changing jobs, missing SP will be retrieved.
+  USE_ENFORCE_JOB_SP_RANGE: false #Caps the player SP level on the total obtainable by their current jobs. After changing jobs, missing SP will be retrieved.
   USE_ENFORCE_ITEM_SUGGESTION: false #Forces the Owl of Minerva and the Cash Shop to always display the defined item array instead of those featured by the players.
   USE_ENFORCE_UNMERCHABLE_CASH: true #Forces players to not sell CASH items via merchants, drops of it disappears.
   USE_ENFORCE_UNMERCHABLE_PET: true #Forces players to not sell pets via merchants, drops of it disappears. (since non-named pets gets dirty name and other possible DB-related issues)
@@ -282,7 +282,7 @@ server:
   ALLOW_CASHSHOP_WORLD_TRANSFER: true #Allows players to buy world transfers in the cash shop.
 
   #Maker Configuration
-  USE_MAKER_PERMISSIVE_ATKUP: false #Allows players to use attack-based strengthening gems on non-weapon items.
+  USE_MAKER_PERMISSIVE_ATKUP: true #Allows players to use attack-based strengthening gems on non-weapon items.
   USE_MAKER_FEE_HEURISTICS: true #Apply compiled values for stimulants and reagents into the Maker fee calculations (max error revolves around 50k mesos). Set false to use basic constant values instead (results are never higher than requested by the client-side).
 
   #Custom Configuration
@@ -342,7 +342,7 @@ server:
   USE_PERFECT_SCROLLING: true #Scrolls doesn't use slots upon failure.
   USE_ENHANCED_CHSCROLL: true #Equips even more powerful with chaos upgrade.
   USE_ENHANCED_CRAFTING: true #Apply chaos scroll on every equip crafted.
-  USE_ENHANCED_CLNSLATE: false #Clean slates can be applied to recover successfully used slots as well.
+  USE_ENHANCED_CLNSLATE: true #Clean slates can be applied to recover successfully used slots as well.
   SCROLL_CHANCE_ROLLS: 1 #Number of rolls for success on a scroll, set 1 for default.
   CHSCROLL_STAT_RATE: 1 #Number of rolls of stat upgrade on a successfully applied chaos scroll, set 1 for default.
   CHSCROLL_STAT_RANGE: 6 #Stat upgrade range (-N, N) on chaos scrolls.

@@ -13645,28 +13645,28 @@ Can proceed to the &quot;The Secrets Behind the Ring?&quot; quest.
     <string name="name" value="The One Who Walks Down Memory Lane1"/>
     <string name="0" value="I went inside the temple through the broken Door to the Past, but I kept circling back to the same place.  This Temple of Time...I can&apos;t go forward unless I get permission from the Goddess.  How do I get permission from the Goddess?  I should ask #b#p2140000##k."/>
     <string name="1" value="He says the Goddess is in eternal sleep but if I get permission from the Goddess&apos; representative, #p2140000#, I can go through Memory Lane.  #p2140000# said that he needs someone to #binvestigate the break in#k, and that if I agree to do it, he will grant me permission.\n\nWhen I said I would gladly do it, #p2140000# said he will have to first #btest#k me and see if I can withstand the flow of energy that governs Memory Lane.  The test is none other than defeating #r999#k #r#o8200001#k in #m270010100#... \n\n#o8200001# #r#a35011##k"/>
-    <string name="2" value="I defeated 999 #o8200001#.  #p2140000# was impressed, and I was able to go further in.  But..."/>
+    <string name="2" value="I defeated 200 #o8200001#.  #p2140000# was impressed, and I was able to go further in.  But..."/>
     <int name="area" value="46"/>
   </imgdir>
   <imgdir name="3502">
     <string name="name" value="The One Who Walks Down Memory Lane2"/>
     <string name="0" value="As #p2140000# said, I was able to pass #m270010100# and go all the way to #m270010200#.  But I couldn&apos;t move beyond that... I thought I was given permission, what&apos;s going on?  I&apos;m going to have to complain to #b#p2140000##k."/>
     <string name="1" value="He said the permission he gave me was only up to #m270010200#, and that if I wanted to go in further,  I would have to prove myself for that as well.  When I told him that I definitely want to explore more, he said to go to #b#m270010200##k this time and defeat #r999 #o8200002##k... \n\n#o8200002# #r#a35021##k"/>
-    <string name="2" value="I defeated 999 #o8200002#.  #p2140000# was once again impressed and granted me permission.  I get a feeling that this permission is only good up to #m270010300#.  If I want to go in further, will I have to prove my strength again?"/>
+    <string name="2" value="I defeated 200 #o8200002#.  #p2140000# was once again impressed and granted me permission.  I get a feeling that this permission is only good up to #m270010300#.  If I want to go in further, will I have to prove my strength again?"/>
     <int name="area" value="46"/>
   </imgdir>
   <imgdir name="3503">
     <string name="name" value="The One Who Walks Down Memory Lane3"/>
     <string name="0" value="I received permission to go all the way to #m270010300#.  If I want to go beyond that, I need to take a test.  I should go to #b#p2140000##k to receive the test."/>
     <string name="1" value="#p2140000# said if I want to go in further, go to #b#m270010300##k and take out #r999 #o8200003##k. \n\n#o8200003# #r#a35031##k"/>
-    <string name="2" value="I defeated 999 #o8200003#.  #p2140000# granted me permission.  Of course, this permission only allows me to go up to #m270010400#."/>
+    <string name="2" value="I defeated 200 #o8200003#.  #p2140000# granted me permission.  Of course, this permission only allows me to go up to #m270010400#."/>
     <int name="area" value="46"/>
   </imgdir>
   <imgdir name="3504">
     <string name="name" value="The One Who Walks Down Memory Lane4"/>
     <string name="0" value="I received permission to go all the way to #m270010400#.  If I want to go beyond that, I need to take a test.  I should go to #b#p2140000##k to receive the test."/>
     <string name="1" value="#p2140000# said if I want to go in further, go to #b#m270010400##k and take out #r999 #o8200004##k. \n\n#o8200004# #r#a35041##k"/>
-    <string name="2" value="I defeated 999 #o8200004#.  #p2140000# granted me permission.  Of course, this permission only allows me to go up to #m270010500#. "/>
+    <string name="2" value="I defeated 200 #o8200004#.  #p2140000# granted me permission.  Of course, this permission only allows me to go up to #m270010500#. "/>
     <int name="area" value="46"/>
   </imgdir>
   <imgdir name="3505">
@@ -13697,28 +13697,28 @@ Can proceed to the &quot;The Secrets Behind the Ring?&quot; quest.
     <string name="name" value="The One Who Walks Down the Road of Regrets1"/>
     <string name="0" value="I received permission from #p2140000# and was finally able to go past the Door of Regret.  But as usual, I couldn&apos;t go past #m270020100#.  I&apos;ll probably have to take a test from #b#p2140000##k to go beyond there..."/>
     <string name="1" value="#p2140000# said if I want to go in further, go to #b#m270020100##k and defeat #r999 #o8200005##k. \n\n#o8200005# #r#a35081##k"/>
-    <string name="2" value="I defeated 999 #o8200005# 999.  #p2140000# granted me permission.  Of course, this permission only allows to me to go up to #m270020200#."/>
+    <string name="2" value="I defeated 200 #o8200005# 999.  #p2140000# granted me permission.  Of course, this permission only allows to me to go up to #m270020200#."/>
     <int name="area" value="46"/>
   </imgdir>
   <imgdir name="3509">
     <string name="name" value="The One Who Walks Down the Road of Regrets2"/>
     <string name="0" value="I received permission to go all the way to #m270020200#.  If I want to go beyond that, I need to take a test.  I should go to #b#p2140000##k to receive the test."/>
     <string name="1" value="#p2140000# said if I want to go in further, go to #b#m270020200##k and defeat #r999 #o8200006##k.\n\n#o8200006# #r#a35091##k"/>
-    <string name="2" value="I defeated 999 #o8200006# 999.  #p2140000# granted me permission.  Of course, this permission only allows to me to go up to #m270020300#."/>
+    <string name="2" value="I defeated 200 #o8200006# 999.  #p2140000# granted me permission.  Of course, this permission only allows to me to go up to #m270020300#."/>
     <int name="area" value="46"/>
   </imgdir>
   <imgdir name="3510">
     <string name="name" value="The One Who Walks Down the Road of Regrets3"/>
     <string name="0" value="I received permission to go all the way to #m270020300#.  If I want to go beyond that, I need to take a test.  I should go to #b#p2140000##k to receive the test."/>
     <string name="1" value="#p2140000# said if I want to go in further, go to #b#m270020300##k and defeat #r999 #o8200007##k. \n\n#o8200007# #r#a35101##k"/>
-    <string name="2" value="I defeated 999 #o8200007# 999.  #p2140000# granted me permission.  Of course, this permission only allows to me to go up to #m270020400#."/>
+    <string name="2" value="I defeated 200 #o8200007# 999.  #p2140000# granted me permission.  Of course, this permission only allows to me to go up to #m270020400#."/>
     <int name="area" value="46"/>
   </imgdir>
   <imgdir name="3511">
     <string name="name" value="The One Who Walks Down the Road of Regrets4"/>
     <string name="0" value="I received permission to go all the way to #m270020400#.  If I want to go beyond that, I need to take a test.  I should go to #b#p2140000##k to receive the test."/>
     <string name="1" value="#p2140000# said if I want to go in further, go to #b#m270020400##k and defeat #r999 #o8200008##k. \n\n#o8200008# #r#a35111##k"/>
-    <string name="2" value="I defeated 999 #o8200008# 999.  #p2140000# granted me permission.  Of course, this permission only allows to me to go up to #m270020500#."/>
+    <string name="2" value="I defeated 200 #o8200008# 999.  #p2140000# granted me permission.  Of course, this permission only allows to me to go up to #m270020500#."/>
     <int name="area" value="46"/>
   </imgdir>
   <imgdir name="3512">
@@ -13749,28 +13749,28 @@ Can proceed to the &quot;The Secrets Behind the Ring?&quot; quest.
     <string name="name" value="The One Who Walks Through the Road to Oblivion1"/>
     <string name="0" value="After having regained my emotions, I was able go past the Door of Oblivion.  Of course, I couldn&apos;t go beyond #m270030100#...  If I want to go in further, I&apos;ll probably have to take another one of #b#p2140000##k&apos;s test..."/>
     <string name="1" value="#p2140000# said if I want to go in further, go to #b#m270030100##k and defeat #r999 #o8200009##k. \n\n#o8200009# #r#a35151##k"/>
-    <string name="2" value="I defeated 999 #o8200009#.  #p2140000# granted me permission.  Of course, this permission only allows me to go up to #m270030200#."/>
+    <string name="2" value="I defeated 200 #o8200009#.  #p2140000# granted me permission.  Of course, this permission only allows me to go up to #m270030200#."/>
     <int name="area" value="46"/>
   </imgdir>
   <imgdir name="3516">
     <string name="name" value="The One Who Walks Through the Road to Oblivion2"/>
     <string name="0" value="I received permission to go all the way to #m270030200#.  If I want to go beyond that, I need to take a test.  I should go to #b#p2140000##k to receive the test. "/>
     <string name="1" value="#p2140000# said if I want to go in further, go to #b#m270030200##k and defeat #r999 #o8200010##k.  \n\n#o8200010# #r#a35161##k"/>
-    <string name="2" value="I defeated 999 #o8200010#.  #p2140000# granted me permission.  Of course, this permission only allows me to go up to #m270030300#."/>
+    <string name="2" value="I defeated 200 #o8200010#.  #p2140000# granted me permission.  Of course, this permission only allows me to go up to #m270030300#."/>
     <int name="area" value="46"/>
   </imgdir>
   <imgdir name="3517">
     <string name="name" value="The One Who Walks Through the Road to Oblivion3"/>
     <string name="0" value="I received permission to go all the way to #m270030300#.  If I want to go beyond that, I need to take a test.  I should go to #b#p2140000##k to receive the test. "/>
     <string name="1" value="#p2140000# said if I want to go in further, go to #b#m270030300##k and defeat #r999 #o8200011##k.  \n\n#o8200011# #r#a35171##k"/>
-    <string name="2" value="I defeated 999 #o8200011#.  #p2140000# granted me permission.  Of course, this permission only allows me to go up to #m270030400#."/>
+    <string name="2" value="I defeated 200 #o8200011#.  #p2140000# granted me permission.  Of course, this permission only allows me to go up to #m270030400#."/>
     <int name="area" value="46"/>
   </imgdir>
   <imgdir name="3518">
     <string name="name" value="The One Who Walks Through the Road to Oblivion4"/>
     <string name="0" value="I received permission to go all the way to #m270030400#.  If I want to go beyond that, I need to take a test.  I should go to #b#p2140000##k to receive the test. "/>
     <string name="1" value="#p2140000# said if I want to go in further, go to #b#m270030400##k and defeat #r999 #o8200012##k.  \n\n#o8200012# #r#a35181##k"/>
-    <string name="2" value="I defeated 999 #o8200012#.  #p2140000# granted me permission.  Of course, this permission only allows me to go up to #m270030500#."/>
+    <string name="2" value="I defeated 200 #o8200012#.  #p2140000# granted me permission.  Of course, this permission only allows me to go up to #m270030500#."/>
     <int name="area" value="46"/>
   </imgdir>
   <imgdir name="3519">
@@ -13857,28 +13857,28 @@ Can proceed to the &quot;The Secrets Behind the Ring?&quot; quest.
     <string name="name" value="The One Who Walks Through the Road to Oblivion1"/>
     <string name="0" value="After having regained my emotions, I was able go past the Door of Oblivion.  Of course, I couldn&apos;t go beyond #m270030100#...  If I want to go in further, I&apos;ll probably have to take another one of #b#p2140000##k&apos;s test..."/>
     <string name="1" value="#p2140000# said if I want to go in further, go to #b#m270030100##k and defeat #r999 #o8200009##k. \n\n#o8200009# #r#a35151##k"/>
-    <string name="2" value="I defeated 999 #o8200009#.  #p2140000# granted me permission.  Of course, this permission only allows me to go up to #m270030200#."/>
+    <string name="2" value="I defeated 200 #o8200009#.  #p2140000# granted me permission.  Of course, this permission only allows me to go up to #m270030200#."/>
     <int name="area" value="46"/>
   </imgdir>
   <imgdir name="3531">
     <string name="name" value="The One Who Walks Through the Road to Oblivion2"/>
     <string name="0" value="I received permission to go all the way to #m270030200#.  If I want to go beyond that, I need to take a test.  I should go to #b#p2140000##k to receive the test. "/>
     <string name="1" value="#p2140000# said if I want to go in further, go to #b#m270030200##k and defeat #r999 #o8200010##k.  \n\n#o8200010# #r#a35161##k"/>
-    <string name="2" value="I defeated 999 #o8200010#.  #p2140000# granted me permission.  Of course, this permission only allows me to go up to #m270030300#."/>
+    <string name="2" value="I defeated 200 #o8200010#.  #p2140000# granted me permission.  Of course, this permission only allows me to go up to #m270030300#."/>
     <int name="area" value="46"/>
   </imgdir>
   <imgdir name="3532">
     <string name="name" value="The One Who Walks Through the Road to Oblivion3"/>
     <string name="0" value="I received permission to go all the way to #m270030300#.  If I want to go beyond that, I need to take a test.  I should go to #b#p2140000##k to receive the test. "/>
     <string name="1" value="#p2140000# said if I want to go in further, go to #b#m270030300##k and defeat #r999 #o8200011##k.  \n\n#o8200011# #r#a35171##k"/>
-    <string name="2" value="I defeated 999 #o8200011#.  #p2140000# granted me permission.  Of course, this permission only allows me to go up to #m270030400#."/>
+    <string name="2" value="I defeated 200 #o8200011#.  #p2140000# granted me permission.  Of course, this permission only allows me to go up to #m270030400#."/>
     <int name="area" value="46"/>
   </imgdir>
   <imgdir name="3533">
     <string name="name" value="The One Who Walks Through the Road to Oblivion4"/>
     <string name="0" value="I received permission to go all the way to #m270030400#.  If I want to go beyond that, I need to take a test.  I should go to #b#p2140000##k to receive the test. "/>
     <string name="1" value="#p2140000# said if I want to go in further, go to #b#m270030400##k and defeat #r999 #o8200012##k.  \n\n#o8200012# #r#a35181##k"/>
-    <string name="2" value="I defeated 999 #o8200012#.  #p2140000# granted me permission.  Of course, this permission only allows me to go up to #m270030500#."/>
+    <string name="2" value="I defeated 200 #o8200012#.  #p2140000# granted me permission.  Of course, this permission only allows me to go up to #m270030500#."/>
     <int name="area" value="46"/>
   </imgdir>
   <imgdir name="3534">
