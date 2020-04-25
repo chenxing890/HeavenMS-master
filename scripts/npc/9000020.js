@@ -22,28 +22,22 @@
 status = -1;
 
 // var travelFrom = [777777777, 541000000];
-var travelFee = [3000, 10000, 7000];
+var travelFee = [3000, 10000];
 
-var travelMap = [800000000, 550000000, 540000000];
-var travelPlace = [
-  "Mushroom Shrine of Japan",
-  "Trend Zone of Malaysia",
-  "Singapore - Central Business District",
-];
-var travelPlaceShort = ["Mushroom Shrine", "Metropolis", "The Lion City"];
-var travelPlaceCountry = ["Japan", "Malaysia", "Singapore"];
+var travelMap = [800000000, 550000000];
+var travelPlace = ["Mushroom Shrine of Japan", "Trend Zone of Malaysia"];
+var travelPlaceShort = ["Mushroom Shrine", "Metropolis"];
+var travelPlaceCountry = ["Japan", "Malaysia"];
 var travelAgent = ["I", "#r#p9201135##k"];
 
 var travelDescription = [
   "If you desire to feel the essence of Japan, there's nothing like visiting the Shrine, a Japanese cultural melting pot. Mushroom Shrine is a mythical place that serves the incomparable Mushroom God from ancient times.",
-  "If you desire to feel the heat of the tropics on an upbeat environment, the residents of Malaysia are eager to welcome you. Also, the metropolis itself is the heart of the local economy, that place is known to always offer something to do or to visit around.",
-  "If you would like to experience lion city and meet Fan Wen Fang, go check out there.",
+  "If you desire to feel the heat of the tropics on an upbeat environment, the residents of Malaysia are eager to welcome you. Also, the metropolis itself is the heart of the local economy, that place is known to always offer something to do or to visit around."
 ];
 
 var travelDescription2 = [
   "Check out the female shaman serving the Mushroom God, and I strongly recommend trying Takoyaki, Yakisoba, and other delicious food sold in the streets of Japan. Now, let's head over to #bMushroom Shrine#k, a mythical place if there ever was one.",
-  "Once there, I strongly suggest you to schedule a visit to Kampung Village. Why? Surely you've come to know about the fantasy theme park Spooky World? No? It's simply put the greatest theme park around there, it's worth a visit! Now, let's head over to the #bTrend Zone of Malaysia#k.",
-  "Highly recommend spit over in public and #bUncle Police#k will find you :)",
+  "Once there, I strongly suggest you to schedule a visit to Kampung Village. Why? Surely you've come to know about the fantasy theme park Spooky World? No? It's simply put the greatest theme park around there, it's worth a visit! Now, let's head over to the #bTrend Zone of Malaysia#k."
 ];
 
 var travelType;
