@@ -20,7 +20,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 function hit() {
-    rm.hitMonsterWithReactor(6090000, 14);
+  rm.hitMonsterWithReactor(6090000, 1);
 }
 
 function act() {}
