@@ -56984,11 +56984,11 @@
           <int name="count" value="1"/>
         </imgdir>
       </imgdir>
-      <imgdir name="infoex">
+      <!-- <imgdir name="infoex">
         <imgdir name="0">
           <string name="value" value="1"/>
         </imgdir>
-      </imgdir>
+      </imgdir> -->
     </imgdir>
   </imgdir>
   <imgdir name="6034">
