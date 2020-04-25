@@ -2025,7 +2025,7 @@
           <int name="mpCon" value="13"/>
           <int name="time" value="15"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="153"/>
+          <int name="mad" value="765"/>
           <int name="x" value="1"/>
         </imgdir>
         <imgdir name="2">
@@ -2033,7 +2033,7 @@
           <int name="mpCon" value="16"/>
           <int name="time" value="20"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="156"/>
+          <int name="mad" value="780"/>
           <int name="x" value="1"/>
         </imgdir>
         <imgdir name="3">
@@ -2041,7 +2041,7 @@
           <int name="mpCon" value="19"/>
           <int name="time" value="25"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="159"/>
+          <int name="mad" value="795"/>
           <int name="x" value="1"/>
         </imgdir>
         <imgdir name="4">
@@ -2049,7 +2049,7 @@
           <int name="mpCon" value="22"/>
           <int name="time" value="30"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="162"/>
+          <int name="mad" value="810"/>
           <int name="x" value="1"/>
         </imgdir>
         <imgdir name="5">
@@ -2057,7 +2057,7 @@
           <int name="mpCon" value="25"/>
           <int name="time" value="35"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="165"/>
+          <int name="mad" value="825"/>
           <int name="x" value="1"/>
         </imgdir>
         <imgdir name="6">
@@ -2065,7 +2065,7 @@
           <int name="mpCon" value="28"/>
           <int name="time" value="40"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="168"/>
+          <int name="mad" value="840"/>
           <int name="x" value="1"/>
         </imgdir>
         <imgdir name="7">
@@ -2073,7 +2073,7 @@
           <int name="mpCon" value="31"/>
           <int name="time" value="45"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="171"/>
+          <int name="mad" value="855"/>
           <int name="x" value="1"/>
         </imgdir>
         <imgdir name="8">
@@ -2081,7 +2081,7 @@
           <int name="mpCon" value="34"/>
           <int name="time" value="50"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="174"/>
+          <int name="mad" value="870"/>
           <int name="x" value="1"/>
         </imgdir>
         <imgdir name="9">
@@ -2089,7 +2089,7 @@
           <int name="mpCon" value="37"/>
           <int name="time" value="55"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="177"/>
+          <int name="mad" value="885"/>
           <int name="x" value="1"/>
         </imgdir>
         <imgdir name="10">
@@ -2097,7 +2097,7 @@
           <int name="mpCon" value="40"/>
           <int name="time" value="60"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="180"/>
+          <int name="mad" value="900"/>
           <int name="x" value="1"/>
         </imgdir>
         <imgdir name="11">
@@ -2105,7 +2105,7 @@
           <int name="mpCon" value="43"/>
           <int name="time" value="65"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="184"/>
+          <int name="mad" value="920"/>
           <int name="x" value="2"/>
         </imgdir>
         <imgdir name="12">
@@ -2113,7 +2113,7 @@
           <int name="mpCon" value="46"/>
           <int name="time" value="70"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="188"/>
+          <int name="mad" value="940"/>
           <int name="x" value="2"/>
         </imgdir>
         <imgdir name="13">
@@ -2121,7 +2121,7 @@
           <int name="mpCon" value="49"/>
           <int name="time" value="75"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="192"/>
+          <int name="mad" value="960"/>
           <int name="x" value="2"/>
         </imgdir>
         <imgdir name="14">
@@ -2129,7 +2129,7 @@
           <int name="mpCon" value="52"/>
           <int name="time" value="80"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="196"/>
+          <int name="mad" value="980"/>
           <int name="x" value="2"/>
         </imgdir>
         <imgdir name="15">
@@ -2137,7 +2137,7 @@
           <int name="mpCon" value="55"/>
           <int name="time" value="85"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="200"/>
+          <int name="mad" value="1000"/>
           <int name="x" value="2"/>
         </imgdir>
         <imgdir name="16">
@@ -2145,7 +2145,7 @@
           <int name="mpCon" value="58"/>
           <int name="time" value="90"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="204"/>
+          <int name="mad" value="1020"/>
           <int name="x" value="2"/>
         </imgdir>
         <imgdir name="17">
@@ -2153,7 +2153,7 @@
           <int name="mpCon" value="61"/>
           <int name="time" value="95"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="208"/>
+          <int name="mad" value="1040"/>
           <int name="x" value="2"/>
         </imgdir>
         <imgdir name="18">
@@ -2161,7 +2161,7 @@
           <int name="mpCon" value="64"/>
           <int name="time" value="100"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="212"/>
+          <int name="mad" value="1060"/>
           <int name="x" value="2"/>
         </imgdir>
         <imgdir name="19">
@@ -2169,7 +2169,7 @@
           <int name="mpCon" value="67"/>
           <int name="time" value="105"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="216"/>
+          <int name="mad" value="1080"/>
           <int name="x" value="2"/>
         </imgdir>
         <imgdir name="20">
@@ -2177,7 +2177,7 @@
           <int name="mpCon" value="70"/>
           <int name="time" value="110"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="220"/>
+          <int name="mad" value="1100"/>
           <int name="x" value="2"/>
         </imgdir>
         <imgdir name="21">
@@ -2185,7 +2185,7 @@
           <int name="mpCon" value="73"/>
           <int name="time" value="115"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="225"/>
+          <int name="mad" value="1125"/>
           <int name="x" value="3"/>
         </imgdir>
         <imgdir name="22">
@@ -2193,7 +2193,7 @@
           <int name="mpCon" value="76"/>
           <int name="time" value="120"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="230"/>
+          <int name="mad" value="1150"/>
           <int name="x" value="3"/>
         </imgdir>
         <imgdir name="23">
@@ -2201,7 +2201,7 @@
           <int name="mpCon" value="79"/>
           <int name="time" value="125"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="235"/>
+          <int name="mad" value="1175"/>
           <int name="x" value="3"/>
         </imgdir>
         <imgdir name="24">
@@ -2209,7 +2209,7 @@
           <int name="mpCon" value="82"/>
           <int name="time" value="130"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="240"/>
+          <int name="mad" value="1200"/>
           <int name="x" value="3"/>
         </imgdir>
         <imgdir name="25">
@@ -2217,7 +2217,7 @@
           <int name="mpCon" value="85"/>
           <int name="time" value="135"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="245"/>
+          <int name="mad" value="1225"/>
           <int name="x" value="3"/>
         </imgdir>
         <imgdir name="26">
@@ -2225,7 +2225,7 @@
           <int name="mpCon" value="88"/>
           <int name="time" value="140"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="250"/>
+          <int name="mad" value="1250"/>
           <int name="x" value="3"/>
         </imgdir>
         <imgdir name="27">
@@ -2233,7 +2233,7 @@
           <int name="mpCon" value="91"/>
           <int name="time" value="145"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="255"/>
+          <int name="mad" value="1275"/>
           <int name="x" value="3"/>
         </imgdir>
         <imgdir name="28">
@@ -2241,7 +2241,7 @@
           <int name="mpCon" value="94"/>
           <int name="time" value="150"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="260"/>
+          <int name="mad" value="1300"/>
           <int name="x" value="3"/>
         </imgdir>
         <imgdir name="29">
@@ -2249,7 +2249,7 @@
           <int name="mpCon" value="97"/>
           <int name="time" value="155"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="265"/>
+          <int name="mad" value="1325"/>
           <int name="x" value="3"/>
         </imgdir>
         <imgdir name="30">
@@ -2257,7 +2257,7 @@
           <int name="mpCon" value="100"/>
           <int name="time" value="160"/>
           <int name="mastery" value="10"/>
-          <int name="mad" value="270"/>
+          <int name="mad" value="1350"/>
           <int name="x" value="3"/>
         </imgdir>
       </imgdir>
