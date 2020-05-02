@@ -396,6 +396,7 @@ server:
   MAX_EQUIPMNT_LVLUP_STAT_UP: 10000 #Max stat upgrade an equipment can have on a levelup.
   MAX_EQUIPMNT_STAT: 32767 #Max stat on an equipment by leveling up.
   USE_EQUIPMNT_LVLUP: 30 #All equips lvlup at max level of N, set 1 to disable.
+  MIN_LEVEL_EQUIPMNT_LVLUP: 120
 
   #Map-Chair Configuration
   USE_CHAIR_EXTRAHEAL: true #Enable map chairs to further recover player's HP and MP (player must have the Chair Mastery skill).
