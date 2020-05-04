@@ -24,7 +24,7 @@
  */
 
 var isPq = true;
-var minPlayers = 2,
+var minPlayers = 1,
   maxPlayers = 6;
 var minLevel = 140,
   maxLevel = 255;

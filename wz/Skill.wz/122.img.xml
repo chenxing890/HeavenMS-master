@@ -2931,31 +2931,31 @@
         <imgdir name="1">
           <string name="hs" value="h1"/>
           <int name="mpCon" value="30"/>
-          <int name="cooltime" value="600"/>
+          <int name="cooltime" value="60"/>
           <int name="time" value="1"/>
         </imgdir>
         <imgdir name="2">
           <string name="hs" value="h2"/>
           <int name="mpCon" value="30"/>
-          <int name="cooltime" value="540"/>
+          <int name="cooltime" value="50"/>
           <int name="time" value="1"/>
         </imgdir>
         <imgdir name="3">
           <string name="hs" value="h3"/>
           <int name="mpCon" value="30"/>
-          <int name="cooltime" value="480"/>
+          <int name="cooltime" value="40"/>
           <int name="time" value="1"/>
         </imgdir>
         <imgdir name="4">
           <string name="hs" value="h4"/>
           <int name="mpCon" value="30"/>
-          <int name="cooltime" value="420"/>
+          <int name="cooltime" value="30"/>
           <int name="time" value="1"/>
         </imgdir>
         <imgdir name="5">
           <string name="hs" value="h5"/>
           <int name="mpCon" value="30"/>
-          <int name="cooltime" value="360"/>
+          <int name="cooltime" value="10"/>
           <int name="time" value="1"/>
         </imgdir>
       </imgdir>

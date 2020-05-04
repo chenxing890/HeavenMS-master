@@ -559,7 +559,7 @@ public class Equip extends Item {
     
     public synchronized void gainItemExp(MapleClient c, int gain) {  // Ronan's Equip Exp gain method
         MapleItemInformationProvider ii = MapleItemInformationProvider.getInstance();
-        if(!ii.isUpgradeable(this.getItemId())) {
+        if(!ii.isUpgradeable(this.getItemId()) ||  c.getPlayer().getLevel() < YamlConfig.config.server.MIN_LEVEL_EQUIPMNT_LVLUP) {
             return;
         }
         

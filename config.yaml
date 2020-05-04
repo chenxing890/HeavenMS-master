@@ -4,9 +4,9 @@
 worlds:
   #Properties for Scania 0
   - flag: 0
-    server_message: 欢迎来到雾都冒险岛
-    event_message: 燥起来
-    why_am_i_recommended: 中文 中文
+    server_message: Welcome To WuDu CQC
+    event_message: Spring Festival
+    why_am_i_recommended: Chinese CQC
     channels: 4
     exp_rate: 2
     meso_rate: 100
@@ -185,7 +185,7 @@ server:
   BYPASS_PIC_EXPIRATION: 20 #Enables PIC bypass, which will remain active for that account by that client machine for N minutes. Set 0 to disable.
   BYPASS_PIN_EXPIRATION: 15 #Enables PIN bypass, which will remain active for that account by that client machine for N minutes. Set 0 to disable.
 
-  AUTOMATIC_REGISTER: true #Automatically register players when they login with a nonexistent username.
+  AUTOMATIC_REGISTER: false #Automatically register players when they login with a nonexistent username.
   BCRYPT_MIGRATION: false #Performs a migration from old SHA-1 and SHA-512 password to bcrypt.
   COLLECTIVE_CHARSLOT: false #Available character slots are contabilized globally rather than per world server.
   DETERRED_MULTICLIENT: false #Enables detection of multi-client and suspicious remote IP on the login system.
@@ -396,6 +396,7 @@ server:
   MAX_EQUIPMNT_LVLUP_STAT_UP: 10000 #Max stat upgrade an equipment can have on a levelup.
   MAX_EQUIPMNT_STAT: 32767 #Max stat on an equipment by leveling up.
   USE_EQUIPMNT_LVLUP: 30 #All equips lvlup at max level of N, set 1 to disable.
+  MIN_LEVEL_EQUIPMNT_LVLUP: 120
 
   #Map-Chair Configuration
   USE_CHAIR_EXTRAHEAL: true #Enable map chairs to further recover player's HP and MP (player must have the Chair Mastery skill).

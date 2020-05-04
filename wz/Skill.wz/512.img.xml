@@ -2033,7 +2033,7 @@
           <int name="mdd" value="52"/>
     <int name="speed" value="100"/>
           <int name="jump" value="27"/>
-          <int name="cooltime" value="165"/>
+          <int name="cooltime" value="155"/>
         </imgdir>
         <imgdir name="13">
           <string name="hs" value="h13"/>
@@ -2045,7 +2045,7 @@
           <int name="mdd" value="53"/>
    <int name="speed" value="100"/>
           <int name="jump" value="27"/>
-          <int name="cooltime" value="160"/>
+          <int name="cooltime" value="140"/>
         </imgdir>
         <imgdir name="14">
           <string name="hs" value="h14"/>
@@ -2057,7 +2057,7 @@
           <int name="mdd" value="54"/>
   <int name="speed" value="100"/>
           <int name="jump" value="27"/>
-          <int name="cooltime" value="155"/>
+          <int name="cooltime" value="125"/>
         </imgdir>
         <imgdir name="15">
           <string name="hs" value="h15"/>
@@ -2069,7 +2069,7 @@
           <int name="mdd" value="55"/>
      <int name="speed" value="100"/>
           <int name="jump" value="27"/>
-          <int name="cooltime" value="150"/>
+          <int name="cooltime" value="110"/>
         </imgdir>
         <imgdir name="16">
           <string name="hs" value="h16"/>
@@ -2081,7 +2081,7 @@
           <int name="mdd" value="56"/>
         <int name="speed" value="100"/>
           <int name="jump" value="27"/>
-          <int name="cooltime" value="145"/>
+          <int name="cooltime" value="95"/>
         </imgdir>
         <imgdir name="17">
           <string name="hs" value="h17"/>
@@ -2093,7 +2093,7 @@
           <int name="mdd" value="57"/>
     <int name="speed" value="100"/>
           <int name="jump" value="27"/>
-          <int name="cooltime" value="140"/>
+          <int name="cooltime" value="80"/>
         </imgdir>
         <imgdir name="18">
           <string name="hs" value="h18"/>
@@ -2105,7 +2105,7 @@
           <int name="mdd" value="58"/>
         <int name="speed" value="100"/>
           <int name="jump" value="27"/>
-          <int name="cooltime" value="135"/>
+          <int name="cooltime" value="65"/>
         </imgdir>
         <imgdir name="19">
           <string name="hs" value="h19"/>
@@ -2117,7 +2117,7 @@
           <int name="mdd" value="59"/>
         <int name="speed" value="100"/>
           <int name="jump" value="27"/>
-          <int name="cooltime" value="130"/>
+          <int name="cooltime" value="50"/>
         </imgdir>
         <imgdir name="20">
           <string name="hs" value="h20"/>
@@ -2129,7 +2129,7 @@
           <int name="mdd" value="60"/>
        <int name="speed" value="100"/>
           <int name="jump" value="27"/>
-          <int name="cooltime" value="125"/>
+          <int name="cooltime" value="25"/>
         </imgdir>
       </imgdir>
       <imgdir name="req">

@@ -24347,7 +24347,7 @@
       <int name="npc" value="1061017"/>
       <imgdir name="mob">
         <imgdir name="0">
-          <int name="count" value="200"/>
+          <int name="count" value="20"/>
           <int name="id" value="8830003"/>
         </imgdir>
       </imgdir>
