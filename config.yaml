@@ -4,9 +4,9 @@
 worlds:
   #Properties for Scania 0
   - flag: 0
-    server_message: 欢迎来到雾都冒险岛
-    event_message: 燥起来
-    why_am_i_recommended: 中文 中文
+    server_message: Welcome To WuDu CQC
+    event_message: Spring Festival
+    why_am_i_recommended: Chinese CQC
     channels: 4
     exp_rate: 2
     meso_rate: 100
