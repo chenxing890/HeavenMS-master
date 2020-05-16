@@ -40,7 +40,7 @@ var maxMapId = 190000002;
 var eventMaps = [190000000, 190000001, 190000002];
 
 var eventTime = 45; // 45 minutes
-var couponsNeeded = 400; // total of coupons to complete the event
+var couponsNeeded = 40; // total of coupons to complete the event
 
 var lobbyRange = [0, 0];
 

@@ -29,7 +29,7 @@ importPackage(Packages.client.inventory);
 importPackage(Packages.server.life);
 
 var isPq = true;
-var minPlayers = 3,
+var minPlayers = 1,
   maxPlayers = 6;
 var minLevel = 21,
   maxLevel = 30;

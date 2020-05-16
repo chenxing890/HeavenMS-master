@@ -21,28 +21,97 @@
 */
 
 /* 2001003 - Straw Hat Snowman
-    @author Ronan
+    @author Richard Wu
  */
-
+var EXP = 44444;
+var items = [
+  // { name: "Clean Slate Scroll 20%", id: 2049003, count: 1 },
+  { name: "EXP Scroll", id: 2022452, count: 1 },
+  //Cash
+  { id: 5050001, count: 99 },
+  { id: 5050002, count: 99 },
+  { id: 5050003, count: 99 },
+  { id: 5050004, count: 99 },
+  { id: 5570000, count: 99 },
+  { id: 5610000, count: 99 },
+  { id: 5610001, count: 99 },
+  { id: 5520000, count: 99 },
+  { name: "Gladius' Strength", id: 2022537, count: 1 },
+  { name: "Heartstopper", id: 2022245, count: 1 },
+  //SCROLL
+  { name: "Chaos Scroll 60%", id: 2049100, count: 1, cost: 1 },
+  { name: "Scroll for Gloves for ATT 10%", id: 2040805, count: 50 },
+  { id: 2040534, count: 50 },
+  { id: 2040514, count: 50 },
+  { id: 2040517, count: 50 },
+  { id: 2040502, count: 50 },
+  { id: 2043302, count: 50 },
+  { id: 2044702, count: 50 },
+  { id: 2044802, count: 50 },
+  { id: 2044002, count: 50 },
+  { id: 2040026, count: 50 },
+  { id: 2040031, count: 50 },
+  { id: 2040329, count: 50 },
+  { id: 2040330, count: 50 },
+  { id: 2040331, count: 50 },
+  { id: 2040705, count: 50 },
+  //EQP
+  { id: 1032030, count: 1, cost: 50 },
+  { id: 1032070, count: 1, cost: 50 }
+];
 var status = -1;
-
-function start() { 
-    action(1, 0, 0);
-} 
-function action(mode, type, selection) { 
-    if (mode < 0)
-        cm.dispose();
-    else {
-        if (mode == 1)
-            status++;
-        else
-            status--;
-        
-        if (status == 0) {
-            cm.sendYesNo("We have a beautiful christmas tree.\r\nDo you want to see/decorate it?");
-        } else if(status == 1) {
-            cm.warp(209000003);
-            cm.dispose();
-        }
+var currentItem = -1;
+function start() {
+  action(1, 0, 0);
+}
+function action(mode, type, selection) {
+  status++;
+  if (mode != 1) {
+    cm.dispose();
+    return;
+  }
+  if (status == 0) {
+    cm.sendNext(
+      "KuMu KuMu Ro A, Jeto Pistoloooooo! Everything 1 Maple Leaf for 1 Item From my One piece, and you have #r#c4001126# #v4001126# #k in your inventory."
+    );
+  } else if (status == 1) {
+    var itemOptions = "";
+    for (var i = 0; i < items.length; i++) {
+      itemOptions +=
+        "#b\r\n#L" + i + "##v" + items[i].id + "#" + "  x " + items[i].count ||
+        1;
     }
-} 
+    cm.sendSimple(itemOptions);
+  } else if (status == 2) {
+    cm.sendGetNumber(
+      "How many #v" + items[selection].id + "# would you like to get ",
+      1,
+      1,
+      99
+    );
+    currentItem = selection;
+  } else if (status == 3 && mode == 1) {
+    var amount = selection;
+    if (!cm.hasItem(4001126, amount * (items[currentItem].cost || 1))) {
+      //枫叶
+      cm.sendNext(
+        "You don't have enough #v4001126# to proceed this transaction, Bakkkkaaaa!"
+      );
+      cm.dispose();
+      return;
+    }
+    cm.gainItem(4001126, -1 * amount * (items[currentItem].cost || 1)); //扣除枫叶
+    if (currentItem == 0) {
+      //经验卷轴
+      cm.gainExp(EXP * cm.getLevel() * amount); //角色等级 x 经验基础
+    } else {
+      cm.gainItem(
+        items[currentItem].id,
+        (items[currentItem].count || 1) * amount
+      );
+    }
+    status = 0;
+    currentItem = -1;
+    cm.dispose();
+  }
+}

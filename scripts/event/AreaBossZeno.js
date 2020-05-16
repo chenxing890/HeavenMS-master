@@ -27,30 +27,37 @@
 	ThreeStep - based on xQuasar's King Clang spawner
 **/
 function init() {
-    scheduleNew();
+  scheduleNew();
 }
 
 function scheduleNew() {
-    setupTask = em.schedule("start", 0);    //spawns upon server start. Each 3 hours an server event checks if boss exists, if not spawns it instantly.
+  setupTask = em.schedule("start", 0); //spawns upon server start. Each 3 hours an server event checks if boss exists, if not spawns it instantly.
 }
 
 function cancelSchedule() {
-    if (setupTask != null)
-        setupTask.cancel(true);
+  if (setupTask != null) setupTask.cancel(true);
 }
 
 function start() {
-    var graysPrairie = em.getChannelServer().getMapFactory().getMap(221040301);
-    var zeno = Packages.server.life.MapleLifeFactory.getMonster(6220001);
-	
-	if(graysPrairie.getMonsterById(6220001) != null) {
-		em.schedule("start", 3 * 60 * 60 * 1000);
-		return;
-	}
-	
-    graysPrairie.spawnMonsterOnGroundBelow(zeno, new Packages.java.awt.Point(-4224, 776));
-    graysPrairie.broadcastMessage(Packages.tools.MaplePacketCreator.serverNotice(6, "Zeno has appeared with a heavy sound of machinery."));
-	em.schedule("start", 3 * 60 * 60 * 1000);
+  var graysPrairie = em.getChannelServer().getMapFactory().getMap(221040301);
+  var zeno = Packages.server.life.MapleLifeFactory.getMonster(6220001);
+
+  if (graysPrairie.getMonsterById(6220001) != null) {
+    em.schedule("start", 5 * 60 * 1000);
+    return;
+  }
+
+  graysPrairie.spawnMonsterOnGroundBelow(
+    zeno,
+    new Packages.java.awt.Point(-4224, 776)
+  );
+  graysPrairie.broadcastMessage(
+    Packages.tools.MaplePacketCreator.serverNotice(
+      6,
+      "Zeno has appeared with a heavy sound of machinery."
+    )
+  );
+  em.schedule("start", 5 * 60 * 1000);
 }
 
 // ---------- FILLER FUNCTIONS ----------
@@ -59,7 +66,9 @@ function dispose() {}
 
 function setup(eim, leaderid) {}
 
-function monsterValue(eim, mobid) {return 0;}
+function monsterValue(eim, mobid) {
+  return 0;
+}
 
 function disbandParty(eim, player) {}
 
@@ -84,4 +93,3 @@ function clearPQ(eim) {}
 function allMonstersDead(eim) {}
 
 function playerUnregistered(eim, player) {}
-

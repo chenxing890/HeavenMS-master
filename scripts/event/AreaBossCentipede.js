@@ -27,30 +27,37 @@
 
 **/
 function init() {
-    scheduleNew();
+  scheduleNew();
 }
 
 function scheduleNew() {
-    setupTask = em.schedule("start", 0);    //spawns upon server start. Each 3 hours an server event checks if boss exists, if not spawns it instantly.
+  setupTask = em.schedule("start", 0); //spawns upon server start. Each 3 hours an server event checks if boss exists, if not spawns it instantly.
 }
 
 function cancelSchedule() {
-    if (setupTask != null)
-        setupTask.cancel(true);
+  if (setupTask != null) setupTask.cancel(true);
 }
 
 function start() {
-    var herbGarden = em.getChannelServer().getMapFactory().getMap(251010102);
-    var gcent = Packages.server.life.MapleLifeFactory.getMonster(5220004);
-	
-	if(herbGarden.getMonsterById(5220004) != null) {
-		em.schedule("start", 3 * 60 *60 * 1000);
-		return;
-	}
-	
-    herbGarden.spawnMonsterOnGroundBelow(gcent, new Packages.java.awt.Point(560, 50));
-    herbGarden.broadcastMessage(Packages.tools.MaplePacketCreator.serverNotice(6, "From the mists surrounding the herb garden, the gargantuous Giant Centipede appears."));
-	em.schedule("start", 3 * 60 *60 * 1000);
+  var herbGarden = em.getChannelServer().getMapFactory().getMap(251010102);
+  var gcent = Packages.server.life.MapleLifeFactory.getMonster(5220004);
+
+  if (herbGarden.getMonsterById(5220004) != null) {
+    em.schedule("start", 5 * 60 * 1000);
+    return;
+  }
+
+  herbGarden.spawnMonsterOnGroundBelow(
+    gcent,
+    new Packages.java.awt.Point(560, 50)
+  );
+  herbGarden.broadcastMessage(
+    Packages.tools.MaplePacketCreator.serverNotice(
+      6,
+      "From the mists surrounding the herb garden, the gargantuous Giant Centipede appears."
+    )
+  );
+  em.schedule("start", 5 * 60 * 1000);
 }
 
 // ---------- FILLER FUNCTIONS ----------
@@ -59,7 +66,9 @@ function dispose() {}
 
 function setup(eim, leaderid) {}
 
-function monsterValue(eim, mobid) {return 0;}
+function monsterValue(eim, mobid) {
+  return 0;
+}
 
 function disbandParty(eim, player) {}
 
@@ -84,4 +93,3 @@ function clearPQ(eim) {}
 function allMonstersDead(eim) {}
 
 function playerUnregistered(eim, player) {}
-

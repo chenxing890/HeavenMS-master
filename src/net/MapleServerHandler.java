@@ -60,7 +60,7 @@ import java.util.Map.Entry;
 import net.server.audit.LockCollector;
 import server.TimerManager;
 
-public class MapleServerHandler extends IoHandlerAdapter {
+    public class MapleServerHandler extends IoHandlerAdapter {
     private final static Set<Short> ignoredDebugRecvPackets = new HashSet<>(Arrays.asList((short) 167, (short) 197, (short) 89, (short) 91, (short) 41, (short) 188, (short) 107));
     
     private PacketProcessor processor;
@@ -136,6 +136,19 @@ public class MapleServerHandler extends IoHandlerAdapter {
             }
             
             FilePrinter.print(FilePrinter.SESSION, "IoSession with " + session.getRemoteAddress() + " opened on " + sdf.format(Calendar.getInstance().getTime()), false);
+            Get_Location_From_IP obj_Get_Location_From_IP = new Get_Location_From_IP();
+            Location_Use_Bean obj_Location_Use_Bean = obj_Get_Location_From_IP.get_ip_Details(session.getRemoteAddress().toString().split("/")[1].split(":")[0]);
+
+            System.out.println("Country Code-- " + obj_Location_Use_Bean.getCountry_code());
+            System.out.println("Country--" + obj_Location_Use_Bean.getCountry());
+
+            String allowRegions[]=YamlConfig.config.server.ALLOW_REGIONS.split(",");
+            if(!Arrays.asList(allowRegions).contains(obj_Location_Use_Bean.getCountry())){ //欧洲佬去死吧
+            FilePrinter.print(FilePrinter.SESSION, "欧洲佬: IoSession with " + session.getRemoteAddress() + " opened on " + sdf.format(Calendar.getInstance().getTime())+" "+"Country Code-- " + obj_Location_Use_Bean.getCountry_code()+ " "+ "Country--" + obj_Location_Use_Bean.getCountry(), false);
+                 MapleSessionCoordinator.getInstance().closeSession(session, true);
+                             
+
+            }
         }
 
         byte ivRecv[] = {70, 114, 122, 82};

@@ -30,33 +30,43 @@
 importPackage(Packages.client);
 
 function init() {
-    scheduleNew();
+  scheduleNew();
 }
 
 function scheduleNew() {
-    setupTask = em.schedule("start", 0);    //spawns upon server start. Each 3 hours an server event checks if boss exists, if not spawns it instantly.
+  setupTask = em.schedule("start", 0); //spawns upon server start. Each 3 hours an server event checks if boss exists, if not spawns it instantly.
 }
 
 function cancelSchedule() {
-    if (setupTask != null)
-        setupTask.cancel(true);
+  if (setupTask != null) setupTask.cancel(true);
 }
 
 function start() {
-    var territoryOfWanderingBear = em.getChannelServer().getMapFactory().getMap(250010304);
-    var taeRoon = Packages.server.life.MapleLifeFactory.getMonster(7220000);
-	
-	if(territoryOfWanderingBear.getMonsterById(7220000) != null) {
-		em.schedule("start", 3 * 60 * 60 * 1000);
-		return;
-	}
-	
-    var posX;
-    var posY = 390;
-    posX =  Math.floor((Math.random() * 700) - 800);
-    territoryOfWanderingBear.spawnMonsterOnGroundBelow(taeRoon, new Packages.java.awt.Point(posX, posY));
-    territoryOfWanderingBear.broadcastMessage(Packages.tools.MaplePacketCreator.serverNotice(6, "Tae Roon has appeared with a soft whistling sound."));
-	em.schedule("start", 3 * 60 * 60 * 1000);
+  var territoryOfWanderingBear = em
+    .getChannelServer()
+    .getMapFactory()
+    .getMap(250010304);
+  var taeRoon = Packages.server.life.MapleLifeFactory.getMonster(7220000);
+
+  if (territoryOfWanderingBear.getMonsterById(7220000) != null) {
+    em.schedule("start", 5 * 60 * 1000);
+    return;
+  }
+
+  var posX;
+  var posY = 390;
+  posX = Math.floor(Math.random() * 700 - 800);
+  territoryOfWanderingBear.spawnMonsterOnGroundBelow(
+    taeRoon,
+    new Packages.java.awt.Point(posX, posY)
+  );
+  territoryOfWanderingBear.broadcastMessage(
+    Packages.tools.MaplePacketCreator.serverNotice(
+      6,
+      "Tae Roon has appeared with a soft whistling sound."
+    )
+  );
+  em.schedule("start", 5 * 60 * 1000);
 }
 
 // ---------- FILLER FUNCTIONS ----------
@@ -65,7 +75,9 @@ function dispose() {}
 
 function setup(eim, leaderid) {}
 
-function monsterValue(eim, mobid) {return 0;}
+function monsterValue(eim, mobid) {
+  return 0;
+}
 
 function disbandParty(eim, player) {}
 
@@ -90,4 +102,3 @@ function clearPQ(eim) {}
 function allMonstersDead(eim) {}
 
 function playerUnregistered(eim, player) {}
-

@@ -858,7 +858,7 @@ public abstract class AbstractDealDamageHandler extends AbstractMaplePacketHandl
                             calcDmgMax *= 1.5;
                         }
                     }
-                    if(ret.skill == FPWizard.POISON_BREATH || ret.skill == FPMage.POISON_MIST || ret.skill == FPArchMage.FIRE_DEMON || ret.skill == ILArchMage.ICE_DEMON) {
+                    if(ret.skill == FPWizard.POISON_BREATH || ret.skill == FPMage.POISON_MIST || ret.skill == FPArchMage.FIRE_DEMON || ret.skill == ILArchMage.ICE_DEMON || ret.skill == BlazeWizard.FLAME_GEAR) {
                             if(monster != null) {
                                     // Turns out poison is completely server side, so I don't know why I added this. >.<
                                     calcDmgMax = monster.getHp() / (70 - chr.getSkillLevel(skill));
@@ -882,7 +882,7 @@ public abstract class AbstractDealDamageHandler extends AbstractMaplePacketHandl
             }
             
             for (int j = 0; j < ret.numDamage; j++) {
-                    int maxCapMultiplier = 50; //raise cap
+                    int maxCapMultiplier = 100; //raise cap
                     int damage = lea.readInt();
                     long hitDmgMax = maxCapMultiplier*calcDmgMax;
                     if(ret.skill == Buccaneer.BARRAGE || ret.skill == ThunderBreaker.BARRAGE) {
@@ -898,7 +898,7 @@ public abstract class AbstractDealDamageHandler extends AbstractMaplePacketHandl
                     }
 
                     if(ret.skill == Marksman.SNIPE) {
-                            damage = 195000*maxCapMultiplier + Randomizer.nextInt(5000*maxCapMultiplier);
+                            damage = chr.getDex()*9000 + Randomizer.nextInt(chr.getDex()*1000); //每一点敏捷 提供9000~10000伤害
                             hitDmgMax = 200000*maxCapMultiplier;
                     } else if (ret.skill == Beginner.BAMBOO_RAIN || ret.skill == Noblesse.BAMBOO_RAIN || ret.skill == Evan.BAMBOO_THRUST || ret.skill == Legend.BAMBOO_THRUST) {
                         hitDmgMax = 82569000; // 30% of Max HP of strongest Dojo boss

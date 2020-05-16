@@ -5556,12 +5556,12 @@
         </imgdir>
         <imgdir name="1">
           <int name="id" value="4003002"/>
-          <int name="count" value="1"/>
+          <int name="count" value="10"/>
           <int name="prop" value="1"/>
         </imgdir>
         <imgdir name="2">
           <int name="id" value="4003003"/>
-          <int name="count" value="1"/>
+          <int name="count" value="10"/>
           <int name="prop" value="1"/>
         </imgdir>
       </imgdir>
@@ -39409,7 +39409,7 @@
         </imgdir>
         <imgdir name="46">
           <int name="id" value="2049100"/>
-          <int name="count" value="5"/>
+          <int name="count" value="99"/>
         </imgdir>
         <imgdir name="10">
           <int name="count" value="-2"/>
@@ -39907,7 +39907,7 @@
         </imgdir>
         <imgdir name="10">
           <int name="id" value="2049100"/>
-          <int name="count" value="4"/>
+          <int name="count" value="40"/>
         </imgdir>
       </imgdir>
       <int name="nextQuest" value="8249"/>

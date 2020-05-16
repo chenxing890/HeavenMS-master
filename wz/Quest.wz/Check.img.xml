@@ -62912,7 +62912,7 @@
     <imgdir name="0">
       <int name="npc" value="2041017"/>
       <int name="lvmin" value="50"/>
-      <int name="interval" value="4320"/>
+      <int name="interval" value="0"/>
     </imgdir>
   </imgdir>
   <imgdir name="8207">
