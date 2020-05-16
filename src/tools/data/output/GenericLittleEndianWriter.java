@@ -33,9 +33,8 @@ import constants.string.CharsetConstants.MapleLanguageType;
  * @since Revision 323
  */
 public class GenericLittleEndianWriter implements LittleEndianWriter {
-    private static Charset ASCII = Charset.forName(MapleLanguageType.LANGUAGE_US.getAscii());
+    private static Charset ASCII = Charset.forName("GBK");
     private ByteOutputStream bos;
-    private static Charset GBK = Charset.forName("GBK");
     /**
      * Class constructor - Protected to prevent instantiation with no arguments.
      */
@@ -120,7 +119,7 @@ public class GenericLittleEndianWriter implements LittleEndianWriter {
      */
     @Override
     public void writeAsciiString(String s) {
-        write(s.getBytes(GBK));
+        write(s.getBytes(ASCII));
     }
 
     /**
@@ -130,7 +129,8 @@ public class GenericLittleEndianWriter implements LittleEndianWriter {
      */
     @Override
     public void writeMapleAsciiString(String s) {
-    writeShort((short) s.getBytes().length);
+    // Edited for Chinese compatibility
+    writeShort((short) s.getBytes(ASCII).length);
     writeAsciiString(s);
     }
 

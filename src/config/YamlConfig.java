@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
-
+import java.io.*;
 
 public class YamlConfig {
 
@@ -17,7 +17,7 @@ public class YamlConfig {
 
     public static YamlConfig fromFile(String filename) {
         try {
-            YamlReader reader = new YamlReader(new FileReader(filename));
+            YamlReader reader = new YamlReader(new InputStreamReader(new FileInputStream(filename), "UTF-8"));
             YamlConfig config = reader.read(YamlConfig.class);
             reader.close();
             return config;
