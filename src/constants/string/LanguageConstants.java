@@ -12,7 +12,7 @@ public class LanguageConstants {
         LANG_PRT(0),
         LANG_ESP(1),
         LANG_ENG(2);
-        
+
         int lang;
         
         private Language(int lang) {

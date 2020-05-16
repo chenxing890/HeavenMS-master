@@ -27,33 +27,46 @@
 
 **/
 function init() {
-    scheduleNew();
+  scheduleNew();
 }
 
 function scheduleNew() {
-    setupTask = em.schedule("start", 0);    //spawns upon server start. Each 3 hours an server event checks if boss exists, if not spawns it instantly.
+  setupTask = em.schedule("start", 0); //spawns upon server start. Each 3 hours an server event checks if boss exists, if not spawns it instantly.
 }
 
 function cancelSchedule() {
-    if (setupTask != null)
-        setupTask.cancel(true);
+  if (setupTask != null) setupTask.cancel(true);
 }
 
 function start() {
-    var snackBarMap = em.getChannelServer().getMapFactory().getMap(105090310);
-    var snackBar = Packages.server.life.MapleLifeFactory.getMonster(8220008);
-	
-	if(snackBarMap.getMonsterById(8220008) != null || snackBarMap.getMonsterById(8220009) != null) {
-		em.schedule("start", 3 * 60 * 60 * 1000);
-		return;
-	}
-	
-        var setPos = [[-626, -604], [735, -600]];
-        var rndPos = setPos[Math.floor(Math.random() * setPos.length)];
-        
-        snackBarMap.spawnMonsterOnGroundBelow(snackBar, new Packages.java.awt.Point(rndPos[0], rndPos[1]));
-        snackBarMap.broadcastMessage(Packages.tools.MaplePacketCreator.serverNotice(6, "Slowly, a suspicious food stand opens up on a strangely remote place."));
-	em.schedule("start", 3 * 60 *60 * 1000);
+  var snackBarMap = em.getChannelServer().getMapFactory().getMap(105090310);
+  var snackBar = Packages.server.life.MapleLifeFactory.getMonster(8220008);
+
+  if (
+    snackBarMap.getMonsterById(8220008) != null ||
+    snackBarMap.getMonsterById(8220009) != null
+  ) {
+    em.schedule("start", 5 * 60 * 1000);
+    return;
+  }
+
+  var setPos = [
+    [-626, -604],
+    [735, -600]
+  ];
+  var rndPos = setPos[Math.floor(Math.random() * setPos.length)];
+
+  snackBarMap.spawnMonsterOnGroundBelow(
+    snackBar,
+    new Packages.java.awt.Point(rndPos[0], rndPos[1])
+  );
+  snackBarMap.broadcastMessage(
+    Packages.tools.MaplePacketCreator.serverNotice(
+      6,
+      "Slowly, a suspicious food stand opens up on a strangely remote place."
+    )
+  );
+  em.schedule("start", 5 * 60 * 1000);
 }
 
 // ---------- FILLER FUNCTIONS ----------
@@ -62,7 +75,9 @@ function dispose() {}
 
 function setup(eim, leaderid) {}
 
-function monsterValue(eim, mobid) {return 0;}
+function monsterValue(eim, mobid) {
+  return 0;
+}
 
 function disbandParty(eim, player) {}
 
@@ -87,4 +102,3 @@ function clearPQ(eim) {}
 function allMonstersDead(eim) {}
 
 function playerUnregistered(eim, player) {}
-

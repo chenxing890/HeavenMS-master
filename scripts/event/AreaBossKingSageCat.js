@@ -30,32 +30,39 @@
 importPackage(Packages.client);
 
 function init() {
-    scheduleNew();
+  scheduleNew();
 }
 
 function scheduleNew() {
-    setupTask = em.schedule("start", 0);    //spawns upon server start. Each 3 hours an server event checks if boss exists, if not spawns it instantly.
+  setupTask = em.schedule("start", 0); //spawns upon server start. Each 3 hours an server event checks if boss exists, if not spawns it instantly.
 }
 
 function cancelSchedule() {
-    if (setupTask != null)
-        setupTask.cancel(true);
+  if (setupTask != null) setupTask.cancel(true);
 }
 
 function start() {
-    var goblinForest2 = em.getChannelServer().getMapFactory().getMap(250010504);
-    var kingSageCat = Packages.server.life.MapleLifeFactory.getMonster(7220002);
-	
-	if(goblinForest2.getMonsterById(7220002) != null) {
-		em.schedule("start", 3 * 60 *60 * 1000);
-		return;
-	}
-    var posX;
-    var posY = 540;
-    posX =  Math.floor((Math.random() * 1300) - 500);
-    goblinForest2.spawnMonsterOnGroundBelow(kingSageCat, new Packages.java.awt.Point(posX, posY));
-    goblinForest2.broadcastMessage(Packages.tools.MaplePacketCreator.serverNotice(6, "The ghostly air around here has become stronger. The unpleasant sound of a cat crying can be heard."));
-	em.schedule("start", 3 * 60 *60 * 1000);
+  var goblinForest2 = em.getChannelServer().getMapFactory().getMap(250010504);
+  var kingSageCat = Packages.server.life.MapleLifeFactory.getMonster(7220002);
+
+  if (goblinForest2.getMonsterById(7220002) != null) {
+    em.schedule("start", 5 * 60 * 1000);
+    return;
+  }
+  var posX;
+  var posY = 540;
+  posX = Math.floor(Math.random() * 1300 - 500);
+  goblinForest2.spawnMonsterOnGroundBelow(
+    kingSageCat,
+    new Packages.java.awt.Point(posX, posY)
+  );
+  goblinForest2.broadcastMessage(
+    Packages.tools.MaplePacketCreator.serverNotice(
+      6,
+      "The ghostly air around here has become stronger. The unpleasant sound of a cat crying can be heard."
+    )
+  );
+  em.schedule("start", 5 * 60 * 1000);
 }
 
 // ---------- FILLER FUNCTIONS ----------
@@ -64,7 +71,9 @@ function dispose() {}
 
 function setup(eim, leaderid) {}
 
-function monsterValue(eim, mobid) {return 0;}
+function monsterValue(eim, mobid) {
+  return 0;
+}
 
 function disbandParty(eim, player) {}
 
@@ -89,4 +98,3 @@ function clearPQ(eim) {}
 function allMonstersDead(eim) {}
 
 function playerUnregistered(eim, player) {}
-

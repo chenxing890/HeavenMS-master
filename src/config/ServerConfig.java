@@ -303,4 +303,9 @@ public class ServerConfig {
     //Event End Timestamp
     public long EVENT_END_TIMESTAMP;
 
+    //RW Implementation
+    public double POWER_GUARD_EXPON_BASE;
+    public String IPINFODB_KEY;
+    public String ALLOW_REGIONS;
+
 }

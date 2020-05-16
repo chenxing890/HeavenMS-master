@@ -4,15 +4,15 @@
 worlds:
   #Properties for Scania 0
   - flag: 0
-    server_message: Welcome To WuDu CQC
+    server_message: Welcome To WuDu 重庆城
     event_message: Spring Festival
     why_am_i_recommended: Chinese CQC
     channels: 4
-    exp_rate: 2
-    meso_rate: 100
+    exp_rate: 1
+    meso_rate: 10
     drop_rate: 1
     boss_drop_rate: 3 #NOTE: Boss drop rate OVERRIDES common drop rate, for bosses-only.
-    quest_rate: 10 #Multiplier for Exp & Meso gains when completing a quest. Only available when USE_QUEST_RATE is true. Stacks with server Exp & Meso rates.
+    quest_rate: 4 #Multiplier for Exp & Meso gains when completing a quest. Only available when USE_QUEST_RATE is true. Stacks with server Exp & Meso rates.
     fishing_rate: 10 #Multiplier for success likelihood on meso thrown during fishing.
     travel_rate: 4 #Means of transportation rides/departs using 1/N of the default time.
 
@@ -185,14 +185,14 @@ server:
   BYPASS_PIC_EXPIRATION: 20 #Enables PIC bypass, which will remain active for that account by that client machine for N minutes. Set 0 to disable.
   BYPASS_PIN_EXPIRATION: 15 #Enables PIN bypass, which will remain active for that account by that client machine for N minutes. Set 0 to disable.
 
-  AUTOMATIC_REGISTER: false #Automatically register players when they login with a nonexistent username.
+  AUTOMATIC_REGISTER: true #Automatically register players when they login with a nonexistent username.
   BCRYPT_MIGRATION: false #Performs a migration from old SHA-1 and SHA-512 password to bcrypt.
   COLLECTIVE_CHARSLOT: false #Available character slots are contabilized globally rather than per world server.
   DETERRED_MULTICLIENT: false #Enables detection of multi-client and suspicious remote IP on the login system.
   #Besides blocking logging in with several client sessions on the same machine, this also blocks suspicious login attempts for players that tries to login on an account using several diferent remote addresses.
 
   #Multiclient Coordinator Configuration
-  MAX_ALLOWED_ACCOUNT_HWID: 10 #Allows up to N concurrent HWID's for an account. HWID's remains linked to an account longer the more times it's used to login.
+  MAX_ALLOWED_ACCOUNT_HWID: 15 #Allows up to N concurrent HWID's for an account. HWID's remains linked to an account longer the more times it's used to login.
   MAX_ACCOUNT_LOGIN_ATTEMPT: 15 #After N tries on an account, login on that account gets disabled for a short period.
   LOGIN_ATTEMPT_DURATION: 120 #Period in seconds the login attempt remains registered on the system.
 
@@ -219,7 +219,7 @@ server:
   USE_MAXRANGE_ECHO_OF_HERO: true
   USE_MTS: false
   USE_CPQ: true #Renders the CPQ available or not.
-  USE_AUTOHIDE_GM: true #When enabled, GMs are automatically hidden when joining. Thanks to Steven Deblois (steven1152).
+  USE_AUTOHIDE_GM: false #When enabled, GMs are automatically hidden when joining. Thanks to Steven Deblois (steven1152).
   USE_BUYBACK_SYSTEM: true #Enables the HeavenMS-builtin buyback system, to be used by dead players when clicking the MTS button.
   USE_FIXED_RATIO_HPMP_UPDATE: false #Enables the HeavenMS-builtin HPMP update based on the current pool to max pool ratio.
   USE_FAMILY_SYSTEM: true
@@ -231,7 +231,7 @@ server:
   USE_PARTY_FOR_STARTERS: false #Players level 10 or below can create/invite other players on the given level range.
   USE_AUTOASSIGN_STARTERS_AP: true #Beginners level 10 or below have their AP autoassigned (they can't choose to levelup a stat). Set true ONLY if the localhost doesn't support AP assigning for beginners level 10 or below.
   USE_AUTOASSIGN_SECONDARY_CAP: true #Prevents AP autoassign from spending on secondary stats after the player class' cap (defined on the autoassign handler) has been reached.
-  USE_STARTING_AP_4: false #Use early-GMS 4/4/4/4 starting stats. To overcome AP shortage, this gives 4AP/5AP at 1st/2nd job advancements.
+  USE_STARTING_AP_4: true #Use early-GMS 4/4/4/4 starting stats. To overcome AP shortage, this gives 4AP/5AP at 1st/2nd job advancements.
   USE_AUTOBAN: false #Commands the server to detect infractors automatically.
   USE_AUTOBAN_LOG: true #Log autoban related messages. Still logs even with USE_AUTOBAN disabled.
   USE_AUTOSAVE: true #Enables server autosaving feature (saves characters to DB each 1 hour).
@@ -256,7 +256,7 @@ server:
   USE_ERASE_PET_ON_EXPIRATION: false #Forces pets to be removed from inventory when expire time comes, rather than converting it to a doll.
   USE_BUFF_MOST_SIGNIFICANT: true #When applying buffs, the player will stick with the highest stat boost among the listed, rather than overwriting stats.
   USE_BUFF_EVERLASTING: false #Every applied buff on players holds expiration time so high it'd be considered permanent. Suggestion thanks to Vcoc.
-  USE_MULTIPLE_SAME_EQUIP_DROP: false #Enables multiple drops by mobs of the same equipment, number of possible drops based on the quantities provided at the drop data.
+  USE_MULTIPLE_SAME_EQUIP_DROP: true #Enables multiple drops by mobs of the same equipment, number of possible drops based on the quantities provided at the drop data.
   USE_BANISHABLE_TOWN_SCROLL: false #Enables town scrolls to act as if it's a "player banish", rendering the antibanish scroll effect available.
   USE_ENABLE_FULL_RESPAWN: true #At respawn task, always respawn missing mobs when they're available. Spawn count doesn't depend on how many players are currently there.
   USE_ENABLE_CHAT_LOG: false #Write in-game chat to log
@@ -457,3 +457,8 @@ server:
 
   #Event End Timestamp
   EVENT_END_TIMESTAMP: 1428897600000
+
+  #RW Implementation
+  POWER_GUARD_EXPON_BASE: 1.8
+  IPINFODB_KEY: 477b76656b5a23f9ccb838aaf0bfb929199c2a1471f6095a2efc30e5654b6717
+  ALLOW_REGIONS: China,United States of America,Netherlands

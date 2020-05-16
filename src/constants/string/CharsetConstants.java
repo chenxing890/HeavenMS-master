@@ -42,7 +42,7 @@ public class CharsetConstants {
                     return l;
                 }
             }
-            return LANGUAGE_PT_BR;
+            return LANGUAGE_US;
         }
     }
 }

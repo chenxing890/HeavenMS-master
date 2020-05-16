@@ -21,6 +21,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package net.server.channel.handlers;
 
+import client.MapleJob;
 import client.MapleBuffStat;
 import client.MapleCharacter;
 import client.MapleClient;
@@ -206,9 +207,17 @@ public final class TakeDamageHandler extends AbstractMaplePacketHandler {
             if (attacker != null) {
                 if (damagefrom == -1) {
                     if (chr.getBuffedValue(MapleBuffStat.POWERGUARD) != null) { // PG works on bosses, but only at half of the rate.
-                        int bouncedamage = (int) (damage * (chr.getBuffedValue(MapleBuffStat.POWERGUARD).doubleValue() / (attacker.isBoss() ? 200 : 100)));
-                        bouncedamage = Math.min(bouncedamage, attacker.getMaxHp() / 10);
-                        damage -= bouncedamage;
+                        int originalbouncedmg = (int) (damage * (chr.getBuffedValue(MapleBuffStat.POWERGUARD).doubleValue() / (attacker.isBoss() ? 200 : 100)));
+                        
+                        int bouncedamage = (int) POWERGUARD_AdvanceCalulation(chr.getBuffedValue(MapleBuffStat.POWERGUARD).doubleValue() /  100,chr,attacker,damage);
+                        
+                        //圣骑buff, 英雄不配得到 :)
+                        if(chr.getJob() == MapleJob.FIGHTER || chr.getJob() == MapleJob.CRUSADER || chr.getJob() == MapleJob.HERO ){
+                            bouncedamage = Math.min(bouncedamage, attacker.getMaxHp() / 50); 
+                        }
+
+                        damage -= originalbouncedmg; //RW: Use original bounce image
+
                         map.damageMonster(chr, attacker, bouncedamage);
                         map.broadcastMessage(chr, MaplePacketCreator.damageMonster(oid, bouncedamage), false, true);
                         attacker.aggroMonsterDamage(chr, bouncedamage);
@@ -261,7 +270,7 @@ public final class TakeDamageHandler extends AbstractMaplePacketHandler {
                 chr.addMPHP(-hploss, -mploss);
             } else if (mesoguard != null) {
                 damage = Math.round(damage / 2);
-                int mesoloss = (int) (damage * (mesoguard.doubleValue() / 100.0));
+                int mesoloss = (int) (damage * (mesoguard.doubleValue() / 100.0 * YamlConfig.config.worlds.get(0).meso_rate));
                 if (chr.getMeso() < mesoloss) {
                     chr.gainMeso(-chr.getMeso(), false);
                     chr.cancelBuffStats(MapleBuffStat.MESOGUARD);
@@ -290,4 +299,17 @@ public final class TakeDamageHandler extends AbstractMaplePacketHandler {
             player.changeMapBanish(attacker.getBanish().getMap(), attacker.getBanish().getPortal(), attacker.getBanish().getMsg());
         }
     }
+
+    public double POWERGUARD_AdvanceCalulation(double PRreduction,MapleCharacter chr,MapleMonster attacker,double damage){
+        //(att,recv)=>(att-(Math.sqrt(recv*100)))/(.9+Math.random()*.1))* 2.5+Math.random()*.1 *(+-1)
+        // double expConst = YamlConfig.config.server.POWER_GUARD_EXPON_BASE
+        int att = attacker.getStats().getPADamage();
+        double potentialDEF = (att- Math.sqrt(damage*100))/ (Math.random()*0.1+.9)* (2.4+Math.random()*0.2)+90;
+
+        //(damage,potentialDEF, PRreduction) => recv * ( skill+ 2**(def*0.03))
+        double calcDamage = Math.max(chr.getStr()*(Math.pow(YamlConfig.config.server.POWER_GUARD_EXPON_BASE,potentialDEF/100+PRreduction*10)),att*potentialDEF/10);
+        // System.out.println("recv "+damage+" with attacker "+att+" and reflect back "+calcDamage +" guard dmg is "+att*potentialDEF/10+" and potentialDEF "+potentialDEF);
+        return calcDamage;
+    }
 }
+

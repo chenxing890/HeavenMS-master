@@ -28,12 +28,16 @@
 	1.0 - First Version by Maple4U
 ---------------------------------------------------------------------------------------------------
 */
+// RW : 星石, 月石 利用起来
 function start() {
-    if(cm.isQuestStarted(3310) && !cm.haveItem(4031709, 1)) {
-        cm.warp(926120100, "out00");
-    } else {
-        cm.sendNext("Alchemy....and Alchemist.....both of them are important. But more importantly, it is the Magatia that tolerate everything. The honor of Magatia should be protected by me.");
-    }
-    
-    cm.dispose();
+  if (cm.isQuestStarted(3310) && !cm.haveItem(4031709, 1)) {
+    cm.warp(926120100, "out00");
+  } else {
+    cm.sendNext(
+      "Alchemy....and Alchemist.....both of them are important. But more importantly, it is the Magatia that tolerate everything. The honor of Magatia should be protected by me."
+    );
+    // cm.gainItem(1442021, 1, true, true);
+  }
+
+  cm.dispose();
 }

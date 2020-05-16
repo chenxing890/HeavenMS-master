@@ -24,34 +24,45 @@ status = -1;
 // var travelFrom = [777777777, 541000000];
 var travelFee = [3000, 10000];
 
-var travelMap = [800000000, 550000000, 211042400, 240050400];
+var travelMap = [800000000, 550000000, 211042400, 240050400, 551030100];
+var itemToGive = [0, 0, 4001017, 0, 4032246];
 var travelPlace = [
   "Mushroom Shrine of Japan",
   "Trend Zone of Malaysia",
-  "Ni Xiang Da Zakum Bu",
-  "Ni Xiang Da HeiLong Bu"
+  "Entrance To The Zakum Altar",
+  "Entrance To The Horntail Cave",
+  "Entrance To The Spooky World"
 ];
 var travelPlaceShort = [
   "Mushroom Shrine",
   "Metropolis",
   "Altar of Zakum",
-  "Entrance of HornTail"
+  "Entrance of HornTail",
+  "Spooky World"
 ];
-var travelPlaceCountry = ["Japan", "Malaysia", "Zakum", "Horntail"];
+var travelPlaceCountry = [
+  "Japan",
+  "Malaysia",
+  "Zakum",
+  "Horntail",
+  "Lion & Bear"
+];
 var travelAgent = ["I", "#r#p9201135##k"];
 
 var travelDescription = [
   "If you desire to feel the essence of Japan, there's nothing like visiting the Shrine, a Japanese cultural melting pot. Mushroom Shrine is a mythical place that serves the incomparable Mushroom God from ancient times.",
   "If you desire to feel the heat of the tropics on an upbeat environment, the residents of Malaysia are eager to welcome you. Also, the metropolis itself is the heart of the local economy, that place is known to always offer something to do or to visit around.",
-  "Ni Xiang Da Bu",
-  "Ni Xiang Bu Xiang"
+  "Go slay the crab!",
+  "Go get the head of dragon",
+  "Go get the cotton of those dolls"
 ];
 
 var travelDescription2 = [
   "Check out the female shaman serving the Mushroom God, and I strongly recommend trying Takoyaki, Yakisoba, and other delicious food sold in the streets of Japan. Now, let's head over to #bMushroom Shrine#k, a mythical place if there ever was one.",
   "Once there, I strongly suggest you to schedule a visit to Kampung Village. Why? Surely you've come to know about the fantasy theme park Spooky World? No? It's simply put the greatest theme park around there, it's worth a visit! Now, let's head over to the #bTrend Zone of Malaysia#k.",
-  "Gao Kuai Dian",
-  "Sudu"
+  "It is a horrible stone",
+  "A creepy 3 heads dragon",
+  "Two poor dolls"
 ];
 
 var travelType;
@@ -127,7 +138,12 @@ function action(mode, type, selection) {
       );
     } else if (status == 1) {
       var travelOptions = "";
-      for (var i = 0; i < travelPlace.length; i++) {
+      var travelLen = travelPlace.length;
+      if (cm.getLevel() < 120) {
+        //120以下不让进
+        travelLen = 2;
+      }
+      for (var i = 0; i < travelLen; i++) {
         travelOptions +=
           "#b\r\n#L" +
           i +
@@ -170,7 +186,10 @@ function action(mode, type, selection) {
       cm.gainMeso(-travelFee[travelType]);
       cm.getPlayer().saveLocation("WORLDTOUR");
       cm.warp(travelMap[travelType], 0);
-      // cm.gainItem(2044402, 99);
+      if (itemToGive[travelType] > 0) {
+        cm.gainItem(itemToGive[travelType], 1);
+        // cm.gainItem(2049100, 99);
+      }
       cm.dispose();
     }
   }
