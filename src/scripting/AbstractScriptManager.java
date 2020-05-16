@@ -26,12 +26,15 @@ import client.MapleClient;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.FileInputStream;
 
 import javax.script.*;
 
 import constants.net.ServerConstants;
 import jdk.nashorn.api.scripting.NashornScriptEngine;
 import tools.FilePrinter;
+
 
 /**
  *
@@ -51,7 +54,7 @@ public abstract class AbstractScriptManager {
             return null;
         }
         NashornScriptEngine engine = (NashornScriptEngine) sef.getScriptEngine();
-        try (FileReader fr = new FileReader(scriptFile)) {
+        try (InputStreamReader fr = new InputStreamReader(new FileInputStream(scriptFile), "UTF-8")) {
             if (ServerConstants.JAVA_8){
                 engine.eval("load('nashorn:mozilla_compat.js');" + System.lineSeparator());
             }

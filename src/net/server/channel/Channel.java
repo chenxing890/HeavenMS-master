@@ -474,8 +474,6 @@ public final class Channel {
     }
     
     public void setServerMessage(String message) {
-         System.out.println("你好");
-         System.out.println(message);
         this.serverMessage = message;
         broadcastPacket(MaplePacketCreator.serverMessage(message));
         getWorldServer().resetDisabledServerMessages();

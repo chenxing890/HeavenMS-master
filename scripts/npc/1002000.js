@@ -1,13 +1,4 @@
 var status = 0;
-var imaps = [
-  104000000,
-  102000000,
-  100000000,
-  101000000,
-  103000000,
-  120000000,
-  105040300
-];
 var maps = [102000000, 100000000, 101000000, 103000000, 120000000];
 var cost = [1000, 1000, 800, 1000, 800];
 var townText = [
@@ -53,7 +44,7 @@ var town = false;
 
 function start() {
   cm.sendNext(
-    "Do you wanna head over to some other town? With a little money involved, I can make it happen. It's a tad expensive, but I run a special 90% discount for beginners."
+    "你想去其他的城镇吗？只要付一点费用我就可以带你去别的地方。价格有点贵，不过我们对新手有90%的折扣。"
   );
 }
 
@@ -62,37 +53,27 @@ function action(mode, type, selection) {
   if (mode != 1) {
     if ((mode == 0 && !town) || mode == -1) {
       if (type == 1 && mode != -1)
-        cm.sendNext(
-          "There's a lot to see in this town, too. Let me know if you want to go somewhere else."
-        );
+        cm.sendNext("这个城镇还有很多值得一看的。如果你要去别的地方请告诉我。");
       cm.dispose();
       return;
-    } else {
-      status -= 2;
-
-      if (status < 1) {
-        cm.dispose();
-        return;
-      }
-    }
+    } else status -= 2;
   }
   if (status == 1)
     cm.sendSimple(
-      "It's understandable that you may be confused about this place if this is your first time around. If you got any questions about this place, fire away.\r\n#L0##bWhat kind of towns are here in Victoria Island?#l\r\n#L1#Please take me somewhere else.#k#l"
+      "如果这是你第一次来到这个地方，你会感到困惑也不足为奇。如果你对这个地方有任何问题就开口吧。\r\n#L0##b金银岛有哪些城镇？#l\r\n#L1#请带我去别的地方。#k#l"
     );
   else if (status == 2) {
     if (selection == 0) {
       town = true;
-      var text =
-        "There are 7 big towns here in Victoria Island. Which of those do you want to know more of?#b";
-      for (var i = 0; i < imaps.length; i++)
-        text += "\r\n#L" + i + "##m" + imaps[i] + "##l";
+      var text = "金银岛有7大城市。你想了解哪个城市？#b";
+      for (var i = 0; i < maps.length; i++)
+        text += "\r\n#L" + i + "##m" + maps[i] + "##l";
       cm.sendSimple(text);
     } else if (selection == 1) {
       var selStr =
         cm.getJobId() == 0
-          ? "There's a special 90% discount for all beginners. Alright, where would you want to go?#b"
-          : "Oh you aren't a beginner, huh? Then I'm afraid I may have to charge you full price. Where would you like to go?#b";
+          ? "对新手我们有 90% 的折扣。请问你想去哪里？#b"
+          : "哦，你已经不是新手了，没错吧？那么我恐怕只能收你全价了。你想去哪里？#b";
       for (var i = 0; i < maps.length; i++)
         selStr +=
           "\r\n#L" +
@@ -101,7 +82,7 @@ function action(mode, type, selection) {
           maps[i] +
           "# (" +
           cost[i] / (cm.getJobId() == 0 ? 10 : 1) +
-          " mesos)#l";
+          " 金币)#l";
       cm.sendSimple(selStr);
     }
   } else if (town) {
@@ -114,17 +95,15 @@ function action(mode, type, selection) {
   } else if (status == 3) {
     selectedMap = selection;
     cm.sendYesNo(
-      "I guess you don't need to be here. Do you really want to move to #b#m" +
+      "我猜你不想再继续待在这里了。你确定想移动到 #b#m" +
         maps[selection] +
-        "##k? Well it'll cost you #b" +
+        "##k？ 那么我将收你 #b" +
         cost[selection] / (cm.getJobId() == 0 ? 10 : 1) +
-        " mesos#k. What do you think?"
+        " 金币#k。 你觉得如何？"
     );
   } else if (status == 4) {
     if (cm.getMeso() < cost[selectedMap] / (cm.getJobId() == 0 ? 10 : 1))
-      cm.sendNext(
-        "You don't have enough mesos. With your abilities, you should have more than that!"
-      );
+      cm.sendNext("你没有足够的金币。以你的能力，你应该有更多！");
     else {
       cm.gainMeso(-(cost[selectedMap] / (cm.getJobId() == 0 ? 10 : 1)));
       cm.warp(maps[selectedMap]);
