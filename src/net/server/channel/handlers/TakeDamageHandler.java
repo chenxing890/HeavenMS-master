@@ -267,28 +267,29 @@ public final class TakeDamageHandler extends AbstractMaplePacketHandler {
                     mploss = curmp;
                 }
                 
-                chr.addMPHP(-hploss, -mploss);
+                chr.addMPHP(-hploss*YamlConfig.config.server.TAKE_DAMAGE_MUL, -mploss);
             } else if (mesoguard != null) {
                 damage = Math.round(damage / 2);
-                int mesoloss = (int) (damage * (mesoguard.doubleValue() / 100.0 * YamlConfig.config.worlds.get(0).meso_rate));
+                int mesoloss = (int) (damage * (mesoguard.doubleValue()*YamlConfig.config.server.MESO_RATE / 100.0 ));
                 if (chr.getMeso() < mesoloss) {
                     chr.gainMeso(-chr.getMeso(), false);
                     chr.cancelBuffStats(MapleBuffStat.MESOGUARD);
                 } else {
                     chr.gainMeso(-mesoloss, false);
                 }
-                chr.addMPHP(-damage, -mpattack);
+                chr.addMPHP(-damage*YamlConfig.config.server.TAKE_DAMAGE_MUL, -mpattack);
             } else {
                 if (chr.isRidingBattleship()) {
                     chr.decreaseBattleshipHp(damage);
                 }
-                chr.addMPHP(-damage, -mpattack);
+                chr.addMPHP(-damage*YamlConfig.config.server.TAKE_DAMAGE_MUL, -mpattack);
             }
         }
+        int afterDamage = damage*YamlConfig.config.server.TAKE_DAMAGE_MUL;
         if (!chr.isHidden()) {
-            map.broadcastMessage(chr, MaplePacketCreator.damagePlayer(damagefrom, monsteridfrom, chr.getId(), damage, fake, direction, is_pgmr, pgmr, is_pg, oid, pos_x, pos_y), false);
+            map.broadcastMessage(chr, MaplePacketCreator.damagePlayer(damagefrom, monsteridfrom, chr.getId(), afterDamage, fake, direction, is_pgmr, pgmr, is_pg, oid, pos_x, pos_y), false);
         } else {
-            map.broadcastGMMessage(chr, MaplePacketCreator.damagePlayer(damagefrom, monsteridfrom, chr.getId(), damage, fake, direction, is_pgmr, pgmr, is_pg, oid, pos_x, pos_y), false);
+            map.broadcastGMMessage(chr, MaplePacketCreator.damagePlayer(damagefrom, monsteridfrom, chr.getId(), afterDamage, fake, direction, is_pgmr, pgmr, is_pg, oid, pos_x, pos_y), false);
         }
         if (GameConstants.isDojo(map.getId())) {
             chr.setDojoEnergy(chr.getDojoEnergy() + YamlConfig.config.server.DOJO_ENERGY_DMG);

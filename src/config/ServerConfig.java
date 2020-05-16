@@ -307,5 +307,6 @@ public class ServerConfig {
     public double POWER_GUARD_EXPON_BASE;
     public String IPINFODB_KEY;
     public String ALLOW_REGIONS;
-
+    public int TAKE_DAMAGE_MUL;
+    public double MESO_RATE;
 }
