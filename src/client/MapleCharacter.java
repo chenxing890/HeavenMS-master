@@ -5376,7 +5376,7 @@ public class MapleCharacter extends AbstractMapleCharacterObject {
     }
     
     public int getMaxClassLevel() {
-        return isCygnus() ? 120 : 200;
+        return isCygnus() ? 120 : 200; //RW
     }
     
     public int getMaxLevel() {
