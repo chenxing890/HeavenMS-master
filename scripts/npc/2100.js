@@ -28,42 +28,43 @@
 var status = -1;
 
 function start() {
-    if (cm.c.getPlayer().getMapId() == 0 || cm.c.getPlayer().getMapId() == 3)
-        cm.sendYesNo("Welcome to the world of MapleStory. The purpose of this training camp is to help beginners. Would you like to enter this training camp? Some people start their journey without taking the training program. But I strongly recommend you take the training program first.");
-    else
-        cm.sendNext("This is the image room where your first training program begins. In this room, you will have an advance look into the job of your choice.");
+  if (cm.c.getPlayer().getMapId() == 0 || cm.c.getPlayer().getMapId() == 3)
+    cm.sendYesNo(
+      "欢迎来到冒险岛世界. 此次训练的目的是帮助新手了解这个世界. 你想要参加这次试炼吗? 有些冒险家拒绝了此次试炼 但是我强烈建议你尝试."
+    );
+  else cm.sendNext("这里是你试炼的第一个房间. 在这里，你可以预先浏览未来职业.");
 }
 
 function action(mode, type, selection) {
-    status++;
-    if (mode != 1) {
-        if(mode == 0 && status == 0){
-            cm.sendYesNo("Do you really want to start your journey right away?");
-            return;
-        }else if(mode == 0 && status == 1 && type == 0){
-            status -= 2;
-            start();
-            return;
-        }else if(mode == 0 && status == 1 && type == 1)
-            cm.sendNext("Please talk to me again when you finally made your decision.");
-        cm.dispose();
-        return;
+  status++;
+  if (mode != 1) {
+    if (mode == 0 && status == 0) {
+      cm.sendYesNo("你确定要开始你的冒险了吗?");
+      return;
+    } else if (mode == 0 && status == 1 && type == 0) {
+      status -= 2;
+      start();
+      return;
+    } else if (mode == 0 && status == 1 && type == 1)
+      cm.sendNext("纠结完了再来和我对话吧.");
+    cm.dispose();
+    return;
+  }
+  if (cm.c.getPlayer().getMapId() == 0 || cm.c.getPlayer().getMapId() == 3) {
+    if (status == 0) {
+      cm.sendNext("行吧，请按照指示完成试炼.");
+    } else if (status == 1 && type == 1) {
+      cm.sendNext("很聪明，新手训练真的没啥用. 自己去探索吧");
+    } else if (status == 1) {
+      cm.warp(1, 0);
+      cm.dispose();
+    } else {
+      cm.warp(40000, 0);
+      cm.dispose();
     }
-    if (cm.c.getPlayer().getMapId() == 0 || cm.c.getPlayer().getMapId() == 3){
-        if(status == 0){
-            cm.sendNext("Ok then, I will let you enter the training camp. Please follow your instructor's lead.");
-        }else if(status == 1 && type == 1){
-            cm.sendNext("It seems like you want to start your journey without taking the training program. Then, I will let you move on to the training ground. Be careful~");
-        }else if(status == 1){
-            cm.warp(1, 0);
-            cm.dispose();
-        }else{
-            cm.warp(40000, 0);
-            cm.dispose();
-        }
-    }else
-    if(status == 0)
-        cm.sendPrev("Once you train hard enough, you will be entitled to occupy a job. You can become a Bowman in Henesys, a Magician in Ellinia, a Warrior in Perion, and a Thief in Kerning City...");
-    else
-        cm.dispose();
+  } else if (status == 0)
+    cm.sendPrev(
+      "当你足够强了, 你就可以转职了. 你可以去射手村转职成为弓箭手, 或者去魔法密林成为魔法师, 或者去勇士部落成为战士, 也可以去废弃都市成为飞侠"
+    );
+  else cm.dispose();
 }
