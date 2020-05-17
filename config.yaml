@@ -4,9 +4,9 @@
 worlds:
   #Properties for Scania 0
   - flag: 0
-    server_message: Welcome To WuDu 重庆城
-    event_message: Spring Festival
-    why_am_i_recommended: Chinese CQC
+    server_message: 勒是雾都, 红岩魂,丰都江边过鬼门
+    event_message: 枫叶季
+    why_am_i_recommended: 好频道
     channels: 4
     exp_rate: 1
     meso_rate: 10
@@ -462,3 +462,5 @@ server:
   POWER_GUARD_EXPON_BASE: 1.8
   IPINFODB_KEY: 477b76656b5a23f9ccb838aaf0bfb929199c2a1471f6095a2efc30e5654b6717
   ALLOW_REGIONS: China,United States of America,Netherlands
+  TAKE_DAMAGE_MUL: 2
+  MESO_RATE: 10.0

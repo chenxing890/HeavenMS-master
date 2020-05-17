@@ -36,8 +36,8 @@ var items = [
   { id: 5610000, count: 99 },
   { id: 5610001, count: 99 },
   { id: 5520000, count: 99 },
-  { name: "Gladius' Strength", id: 2022537, count: 1 },
-  { name: "Heartstopper", id: 2022245, count: 1 },
+  { id: 2022537, count: 1 },
+  { id: 2022245, count: 1 },
   //SCROLL
   { name: "Chaos Scroll 60%", id: 2049100, count: 1, cost: 1 },
   { name: "Scroll for Gloves for ATT 10%", id: 2040805, count: 50 },
@@ -55,6 +55,8 @@ var items = [
   { id: 2040330, count: 50 },
   { id: 2040331, count: 50 },
   { id: 2040705, count: 50 },
+  { id: 2040933, count: 50 },
+  { id: 2043002, count: 50 },
   //EQP
   { id: 1032030, count: 1, cost: 50 },
   { id: 1032070, count: 1, cost: 50 }
@@ -72,31 +74,24 @@ function action(mode, type, selection) {
   }
   if (status == 0) {
     cm.sendNext(
-      "KuMu KuMu Ro A, Jeto Pistoloooooo! Everything 1 Maple Leaf for 1 Item From my One piece, and you have #r#c4001126# #v4001126# #k in your inventory."
+      "枯木枯木落啊, 摘套罗,皮斯脱落!!!! 来吧,只要你有 #v4001126# 就可以得到我的财宝. 你现在背包里有#r#c4001126# 个 #v4001126##k. "
     );
   } else if (status == 1) {
     var itemOptions = "";
     for (var i = 0; i < items.length; i++) {
       itemOptions +=
-        "#b\r\n#L" + i + "##v" + items[i].id + "#" + "  x " + items[i].count ||
+        "#b\r\n#L" + i + "##v" + items[i].id + "#" + "  个 " + items[i].count ||
         1;
     }
     cm.sendSimple(itemOptions);
   } else if (status == 2) {
-    cm.sendGetNumber(
-      "How many #v" + items[selection].id + "# would you like to get ",
-      1,
-      1,
-      99
-    );
+    cm.sendGetNumber("你想交换多少个 #v" + items[selection].id + "#", 1, 1, 99);
     currentItem = selection;
   } else if (status == 3 && mode == 1) {
     var amount = selection;
     if (!cm.hasItem(4001126, amount * (items[currentItem].cost || 1))) {
       //枫叶
-      cm.sendNext(
-        "You don't have enough #v4001126# to proceed this transaction, Bakkkkaaaa!"
-      );
+      cm.sendNext("你并没有足够的 #v4001126# 继续这次交易, 滚粗!");
       cm.dispose();
       return;
     }

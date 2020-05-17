@@ -69,23 +69,23 @@ function action(mode, type, selection) {
     //     status = 0;
     if (status == 0) {
       cm.sendNext(
-        "Hi I am a document and I am also a toy collector, bring me those toys and in exchange I will give you some #v4001126# as rewards (#rEvery Minute#k I will change my mind!!)"
+        "你好,冒险者,别看我是个文件包,我还是一名玩具收藏家. 把你旅途中收集到的玩具带来给我吧, 我可以提供一些 #v4001126# 作为交换 (我的需求#r每分钟#k都会变哦!!)"
       );
       //       cm.dispose();
     } else if (status == 1) {
       currentReqItemIdx = new Date().getMinutes() % toys.length;
       cm.sendYesNo(
-        "I would like to collect a #b1#k\r\n#v" +
+        "我现在想要一个 #b1#k\r\n#v" +
           toys[currentReqItemIdx].id +
-          "# at this moment, do you want to exchange with me?"
+          "#, 你要跟我换吗?"
       );
     } else {
       if (type == 1) {
         if (!cm.hasItem(toys[currentReqItemIdx].id, 1)) {
           cm.sendNext(
-            "You don't have a #v" +
+            "你的背包里并没有 #v" +
               toys[currentReqItemIdx].id +
-              "# to proceed this transaction, don't ever tryna fool me!"
+              "# ! 请带给我指定玩具来获得我奖励!"
           );
           cm.dispose();
           return;
