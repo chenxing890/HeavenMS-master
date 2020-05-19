@@ -309,4 +309,5 @@ public class ServerConfig {
     public String ALLOW_REGIONS;
     public int TAKE_DAMAGE_MUL;
     public double MESO_RATE;
+    public int HP_REDUCTION_UNIT;
 }

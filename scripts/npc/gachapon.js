@@ -33,7 +33,9 @@ var mapName = [
   "昭和村澡堂 (M)",
   "昭和村澡堂 (F)",
   "新叶城",
-  "诺特勒斯"
+  "诺特勒斯",
+  "冰峰雪域",
+  "诺提勒斯"
 ];
 var curMapName = "";
 
@@ -44,8 +46,8 @@ function start() {
       cm.getNpc() != 9100117 && cm.getNpc() != 9100109
         ? cm.getNpc() - 9100100
         : cm.getNpc() == 9100109
-        ? 8
-        : 9
+        ? 9
+        : 11
     ];
 
   action(1, 0, 0);

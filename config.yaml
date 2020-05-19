@@ -464,3 +464,4 @@ server:
   ALLOW_REGIONS: China,United States of America,Netherlands
   TAKE_DAMAGE_MUL: 2
   MESO_RATE: 10.0
+  HP_REDUCTION_UNIT: 250

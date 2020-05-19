@@ -257,6 +257,7 @@ public final class TakeDamageHandler extends AbstractMaplePacketHandler {
                 }
             }
             Integer mesoguard = chr.getBuffedValue(MapleBuffStat.MESOGUARD);
+            damage = this.HP_Reduction(YamlConfig.config.server.TAKE_DAMAGE_MUL*damage,chr);
             if (chr.getBuffedValue(MapleBuffStat.MAGIC_GUARD) != null && mpattack == 0) {
                 int mploss = (int) (damage * (chr.getBuffedValue(MapleBuffStat.MAGIC_GUARD).doubleValue() / 100.0));
                 int hploss = damage - mploss;
@@ -267,7 +268,8 @@ public final class TakeDamageHandler extends AbstractMaplePacketHandler {
                     mploss = curmp;
                 }
                 
-                chr.addMPHP(-hploss*YamlConfig.config.server.TAKE_DAMAGE_MUL, -mploss);
+                chr.addMPHP(-hploss, -mploss);
+
             } else if (mesoguard != null) {
                 damage = Math.round(damage / 2);
                 int mesoloss = (int) (damage * (mesoguard.doubleValue()*YamlConfig.config.server.MESO_RATE / 100.0 ));
@@ -277,19 +279,20 @@ public final class TakeDamageHandler extends AbstractMaplePacketHandler {
                 } else {
                     chr.gainMeso(-mesoloss, false);
                 }
-                chr.addMPHP(-damage*YamlConfig.config.server.TAKE_DAMAGE_MUL, -mpattack);
+
+                chr.addMPHP(-damage, -mpattack);
             } else {
                 if (chr.isRidingBattleship()) {
                     chr.decreaseBattleshipHp(damage);
                 }
-                chr.addMPHP(-damage*YamlConfig.config.server.TAKE_DAMAGE_MUL, -mpattack);
+
+                chr.addMPHP(-damage, -mpattack);
             }
         }
-        int afterDamage = damage*YamlConfig.config.server.TAKE_DAMAGE_MUL;
         if (!chr.isHidden()) {
-            map.broadcastMessage(chr, MaplePacketCreator.damagePlayer(damagefrom, monsteridfrom, chr.getId(), afterDamage, fake, direction, is_pgmr, pgmr, is_pg, oid, pos_x, pos_y), false);
+            map.broadcastMessage(chr, MaplePacketCreator.damagePlayer(damagefrom, monsteridfrom, chr.getId(), damage, fake, direction, is_pgmr, pgmr, is_pg, oid, pos_x, pos_y), false);
         } else {
-            map.broadcastGMMessage(chr, MaplePacketCreator.damagePlayer(damagefrom, monsteridfrom, chr.getId(), afterDamage, fake, direction, is_pgmr, pgmr, is_pg, oid, pos_x, pos_y), false);
+            map.broadcastGMMessage(chr, MaplePacketCreator.damagePlayer(damagefrom, monsteridfrom, chr.getId(), damage, fake, direction, is_pgmr, pgmr, is_pg, oid, pos_x, pos_y), false);
         }
         if (GameConstants.isDojo(map.getId())) {
             chr.setDojoEnergy(chr.getDojoEnergy() + YamlConfig.config.server.DOJO_ENERGY_DMG);
@@ -311,6 +314,12 @@ public final class TakeDamageHandler extends AbstractMaplePacketHandler {
         double calcDamage = Math.max(chr.getStr()*(Math.pow(YamlConfig.config.server.POWER_GUARD_EXPON_BASE,potentialDEF/100+PRreduction*10)),att*potentialDEF/10);
         // System.out.println("recv "+damage+" with attacker "+att+" and reflect back "+calcDamage +" guard dmg is "+att*potentialDEF/10+" and potentialDEF "+potentialDEF);
         return calcDamage;
+    }
+
+    private int HP_Reduction(int damage,MapleCharacter chr){
+        int retDmg = (int)(damage * 0.01*Math.round(chr.getMaxHp()/YamlConfig.config.server.HP_REDUCTION_UNIT)) ;
+       return retDmg;
+
     }
 }
 

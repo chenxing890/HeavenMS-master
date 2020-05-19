@@ -27,26 +27,20 @@ var travelFee = [3000, 10000];
 var travelMap = [800000000, 550000000, 211042400, 240050400, 551030100];
 var itemToGive = [0, 0, 4001017, 0, 4032246];
 var travelPlace = [
-  "Mushroom Shrine of Japan",
-  "Trend Zone of Malaysia",
-  "Entrance To The Zakum Altar",
-  "Entrance To The Horntail Cave",
-  "Entrance To The Spooky World"
+  "日本蘑菇神社",
+  "马来西亚闹市区",
+  "扎昆祭坛入口",
+  "黑龙洞穴入口",
+  "梦幻公园入口"
 ];
 var travelPlaceShort = [
-  "Mushroom Shrine",
-  "Metropolis",
-  "Altar of Zakum",
-  "Entrance of HornTail",
-  "Spooky World"
+  "蘑菇神社",
+  "吉隆坡",
+  "扎昆祭坛",
+  "黑龙巢穴",
+  "梦幻公园"
 ];
-var travelPlaceCountry = [
-  "Japan",
-  "Malaysia",
-  "Zakum",
-  "Horntail",
-  "Lion & Bear"
-];
+var travelPlaceCountry = ["日本", "马来西亚", "扎昆", "黑龙", "狮子与熊"];
 var travelAgent = ["I", "#r#p9201135##k"];
 
 var travelDescription = [
@@ -147,7 +141,7 @@ function action(mode, type, selection) {
         travelOptions +=
           "#b\r\n#L" +
           i +
-          "#Yes, take me to " +
+          "#是的, 请带我去 " +
           travelPlaceShort[i] +
           " (" +
           travelPlaceCountry[i] +

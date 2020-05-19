@@ -423,7 +423,7 @@ public class NPCConversationManager extends AbstractPlayerInteraction {
 
 		sendNext("You have obtained a #b#t" + item.getId() + "##k.");
 		
-		String map = c.getChannelServer().getMapFactory().getMap(maps[(getNpc() != 9100117 && getNpc() != 9100109) ? (getNpc() - 9100100) : getNpc() == 9100109 ? 8 : 9]).getMapName();
+		String map = c.getChannelServer().getMapFactory().getMap(maps[(getNpc() != 9100117 && getNpc() != 9100109) ? (getNpc() - 9100100) : getNpc() == 9100109 ? 9 : 11]).getMapName();
 		
 		LogHelper.logGacha(getPlayer(), item.getId(), map);
 		

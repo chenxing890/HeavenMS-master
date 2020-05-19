@@ -47,10 +47,19 @@ var toys = [
   //mop
   { id: 1442021, reward: 10 },
   { id: 1442022, reward: 10 },
-  { id: 1442023, reward: 10 }
+  { id: 1442023, reward: 10 },
+  //tube
+  { id: 1322021, reward: 15 },
+  { id: 1322022, reward: 15 },
+  { id: 1322023, reward: 15 },
+  { id: 1322024, reward: 15 },
+  { id: 1322025, reward: 15 },
+  { id: 1322026, reward: 15 },
+  //lolipop
+  { id: 1322003, reward: 20 }
 ];
 var status;
-var currentReqItemIdx = -1;
+var options = "";
 function start() {
   status = -1;
   action(1, 0, 0);
@@ -69,34 +78,43 @@ function action(mode, type, selection) {
     //     status = 0;
     if (status == 0) {
       cm.sendNext(
-        "你好,冒险者,别看我是个文件包,我还是一名玩具收藏家. 把你旅途中收集到的玩具带来给我吧, 我可以提供一些 #v4001126# 作为交换 (我的需求#r每分钟#k都会变哦!!)"
+        "你好,冒险者,别看我是个文件包,我还是一名玩具收藏家. 把你旅途中收集到的玩具带来给我吧, 我可以提供一些 #v4001126# 作为交换!"
       );
       //       cm.dispose();
     } else if (status == 1) {
-      currentReqItemIdx = new Date().getMinutes() % toys.length;
-      cm.sendYesNo(
-        "我现在想要一个 #b1#k\r\n#v" +
-          toys[currentReqItemIdx].id +
-          "#, 你要跟我换吗?"
-      );
+      for (var i = 0; i < toys.length; i++) {
+        options +=
+          "#b\r\n#L" +
+          i +
+          "##v" +
+          toys[i].id +
+          "# 有可能得到 1~" +
+          (!toys[i].reward ? 5 : toys[i].reward) +
+          " 个 #v4001126#";
+      }
+      cm.sendSimple("我现在的采购清单是:\r\n" + options);
     } else {
-      if (type == 1) {
-        if (!cm.hasItem(toys[currentReqItemIdx].id, 1)) {
-          cm.sendNext(
-            "你的背包里并没有 #v" +
-              toys[currentReqItemIdx].id +
-              "# ! 请带给我指定玩具来获得我奖励!"
-          );
-          cm.dispose();
-          return;
-        } else {
-          cm.gainItem(toys[currentReqItemIdx].id, -1); //扣除玩具
+      if (!cm.hasItem(toys[selection].id, 1)) {
+        cm.sendNext(
+          "你的背包里并没有 #v" +
+            toys[selection].id +
+            "# ! 请带给我指定玩具来获得我奖励!"
+        );
+        cm.dispose();
+        return;
+      } else {
+        if (cm.canHold(BONUS_ITEM)) {
+          cm.gainItem(toys[selection].id, -1); //扣除玩具
           cm.gainItem(
             BONUS_ITEM,
-            Math.ceil(Math.random() * (toys[currentReqItemIdx].reward || 5))
+            Math.ceil(
+              Math.random() *
+                (!toys[selection].reward ? 5 : toys[selection].reward)
+            )
           ); //随机5个
         }
       }
+
       status = 0;
       cm.dispose();
       return;
