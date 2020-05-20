@@ -47,10 +47,10 @@ function action(mode, type, selection) {
             status--;
             
         if(status == -1) {
-            cm.sendNext("嗯...您有没有机会抚养我的一个孩子？ 我完善了一个使用生命之水将生命注入娃娃的咒语。 人们称其为＃bPet＃k。 如果您有一个，请随时向我提问。");
+            cm.sendNext("嗯...您有没有机会抚养我的一个孩子？ 我完善了一个使用生命之水将生命注入娃娃的咒语。 人们称其为＃b宠物＃k。 如果您有一个，请随时向我提问。");
         }
         else if (status == 0)
-            cm.sendSimple("您想进一步了解什么？#b \ r \ n＃L0＃向我详细介绍宠物。＃l \ r \ n＃L1＃我如何养宠物？#l \ r \ n＃L2＃养宠物#l \ r \ n＃L3＃Brown和Black Kitty的命令是什么？#l \ r \ n＃L4＃Brown Puppy的命令是什么？#l \ r \ n＃L5＃是什么#l \ r \ n＃L6＃Mini Kargo的命令是什么？#l \ r \ n＃L7＃Rudolph和Dasher的命令是什么？#l \ r \ n＃ L8＃黑猪的命令是什么？#l \ r \ n＃L9＃熊猫的命令是什么？#l \ r \ n＃L10＃赫斯基的命令是什么？#l \ r \ n＃L11 #Dino Boy和Dino Girl的命令是什么？#l \ r \ n＃L12＃Monkey的命令是什么？#l \ r \ n＃L13＃Turkey的命令是什么？#l \ r \ n ＃L14＃白虎的命令是什么？#l \ r \ n＃L15＃企鹅的命令是什么？#l \ r \ n＃L16＃金猪的命令是什么？#l \ r \ n ＃L17＃机器人的命令是什么？#l \ r \ n＃L18＃Mini Yeti的命令是什么？#l \ r \ n＃L19＃Jr。Balrog的命令是什么？#l \ r \ n＃L20＃Baby Dragon的命令是什么？#l \ r \ n＃L21＃绿色/红色/蓝色龙的命令是什么？#l \ r \ n＃L22＃黑龙的命令是什么？#l \ r \ n＃L23＃Jr的命令是什么。收割者？#l \ r \ n＃L24＃豪猪的命令是什么？#l \ r \ n＃L25＃雪人的命令是什么？#l \ r \ n＃L26＃臭鼬的命令是什么？ #l \ r \ n＃L27＃请教我有关转移宠物能力点的信息。＃l");
+            cm.sendSimple("您想进一步了解什么？#b \ r \ n＃L0＃向我详细介绍宠物。＃l \ r \ n＃L1＃我如何养宠物？#l \ r \ n＃L2＃养宠物#l \ r \ n＃L3＃小猫的命令是什么？#l \ r \ n＃L4＃棕色狗狗的命令是什么？#l \ r \ n＃L5＃是什么#l \ r \ n＃L6＃Mini Kargo的命令是什么？#l \ r \ n＃L7＃Rudolph和Dasher的命令是什么？#l \ r \ n＃ L8＃黑猪的命令是什么？#l \ r \ n＃L9＃熊猫的命令是什么？#l \ r \ n＃L10＃赫斯基的命令是什么？#l \ r \ n＃L11 #恐龙王子和恐龙公主的命令是什么？#l \ r \ n＃L12＃Monkey的命令是什么？#l \ r \ n＃L13＃Turkey的命令是什么？#l \ r \ n ＃L14＃白虎的命令是什么？#l \ r \ n＃L15＃企鹅的命令是什么？#l \ r \ n＃L16＃金猪的命令是什么？#l \ r \ n ＃L17＃机器人的命令是什么？#l \ r \ n＃L18＃Mini Yeti的命令是什么？#l \ r \ n＃L19＃Jr。Balrog的命令是什么？#l \ r \ n＃L20＃Baby Dragon的命令是什么？#l \ r \ n＃L21＃绿色/红色/蓝色龙的命令是什么？#l \ r \ n＃L22＃黑龙的命令是什么？#l \ r \ n＃L23＃小收割者的命令是什么？#l \ r \ n＃L24＃豪猪的命令是什么？#l \ r \ n＃L25＃雪人的命令是什么？#l \ r \ n＃L26＃臭鼬的命令是什么？ #l \ r \ n＃L27＃请教我有关转移宠物能力点的信息。＃l");
         else if (status == 1) {
             sel = selection;
             if (selection == 0) {
