@@ -43,7 +43,7 @@ var equip;
 
 function start() {
     cm.getPlayer().setCS(true);
-    var selStr = "你好。 我是邪恶的，狙击手。 但是，我曾经是Athena Pierce的顶级学生。 虽然我不再打猎了，但我可以制造一些对您有用的弓箭手物品...＃b"
+    var selStr = "你好。 我是维希斯，狙击手。 我曾经是雅典娜渗透者的顶级学生。 虽然我不再打猎了，但我可以制造一些对您有用的弓箭手物品...＃b"
     var options = ["造弓","制造弩","做手套","升级手套","制造材料","制造箭"];
     for (var i = 0; i < options.length; i++)
         selStr += "\r\n#L" + i + "# " + options[i] + "#l";
@@ -68,7 +68,7 @@ function action(mode, type, selection) {
             for (var i = 0; i < items.length; i++)
                 selStr += "\r\n#L" + i + "##t" + items[i] + "##k - Bowman Lv. " + (10 + (i * 5)) + "#l#b";
         }else if (selection == 2) { //glove refine
-            var selStr = "好吧，那你想让我戴哪只手套？#b";
+            var selStr = "好吧，那你想让我做哪只手套？#b";
             items = [1082012,1082013,1082016,1082048,1082068,1082071,1082084,1082089];
             for (var i = 0; i < items.length; i++)
                 selStr += "\r\n#L" + i + "##t" + items[i] + "##k - Bowman Lv. " + (15 + (i * 5) > 40 ? ((i-1) * 10) : 15 + (i * 5)) + "#l#b";
@@ -152,7 +152,7 @@ function action(mode, type, selection) {
         var complete = true;
         
         if (cm.getMeso() < (cost * qty)) {
-            cm.sendOk("抱歉，这就是我的生活。 没有中观，没有项目。");
+            cm.sendOk("抱歉，这就是我的生活。 没有钱，没有产品。");
             cm.dispose();
             return;
         }
@@ -165,7 +165,7 @@ function action(mode, type, selection) {
                 complete = false;
         }	
         if (!complete)
-            cm.sendOk("您肯定会在所有人中了解拥有优质物品的价值吗？ 没有我需要的物品，我无法做到这一点。");
+            cm.sendOk("您确定会在所有人中了解拥有优质物品的价值吗？ 没有我需要的物品，我无法做到这一点。");
         else {
             var recvItem = item, recvQty;
             
