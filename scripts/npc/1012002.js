@@ -165,7 +165,7 @@ function action(mode, type, selection) {
                 complete = false;
         }	
         if (!complete)
-            cm.sendOk("您确定会在所有人中了解拥有优质物品的价值吗？ 没有我需要的物品，我无法做到这一点。");
+            cm.sendOk("我们都知道,优质物品需要优质材料. 您没有我需要的物品，我无法做到这一点。");
         else {
             var recvItem = item, recvQty;
             
